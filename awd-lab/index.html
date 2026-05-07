@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QYBF83F9G"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5QYBF83F9G');
+        </script>
+    <!-- Custom Meta Tags -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+        <meta property="og:title" content="AWD Design Lab"/>
+        <meta property="og:image" content="awd.png"/>
+        <meta property="og:description" content="AWD Design Lab"/>
+        <meta property="og:url" content="http://www.angelawallace.net/index.htm"/>
+        <title>Angela Wallace // Senior UI Designer</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/> 
+        <meta name="description" content="AWD Design Lab"/>
+        <meta name="author" content="Angela Wallace"/>
+	<!--<link rel="apple-touch-icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/>
+    <link rel="shortcut icon" href="favicon.ico"> -->
+    <!-- "Inter" Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
+  <!-- Global Tokens -->
+        <link rel="stylesheet" href="css/tokens.css" />
+  <!-- Conponents -->
+        <link rel="stylesheet" href="css/components.css" />
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="css/main.css" />
+  <!-- Scatter Plot CSS -->
+        <link rel="stylesheet" href="css/plot.css" />
+  <!-- Layer 3 Case Studies -->
+        <link rel="stylesheet" href="css/case-study.css" />
+        <link rel="stylesheet" href="css/surface.css" />
+</head>
+<body class="ai-lab">
+  <div id="frame" class="frame" aria-hidden="true"></div>
+
+  <div class="orientation-lock">
+    <div class="orientation-lock__content">
+      <p>Rotate your device</p>
+    </div>
+  </div>
+
+  <div class="lab-logo">
+    <span class="lab-logo__text">AWD LAB</span>
+    <span class="lab-logo__icon"><img src="assets/components/icon--ai.svg" alt="AWD Lab icon" /></span>
+  </div>
+
+
+  <!-- Layer 2: Project Overlay -->
+  <div id="modal-root" class="modal-overlay"></div>
+
+  <div class="site">
+
+
+    <!-- Sticky header is INSIDE the frame bounds -->
+    <header class="global-header sub-nav">
+      <div class="header-inner container">
+        <div class="designer-name">
+          <p><a class="back" href="/"><img class="icon--back" src="assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a></p>
+        </div>
+        <nav class="global-nav" aria-label="Primary">
+          <ul class="global-nav__list" id="navList">
+            <li>
+              <a data-nav="react" class="is-active">
+                <span class="nav-step">1</span>
+                <span class="nav-text">APP</span>
+              </a>
+            </li>
+            <li>
+              <a data-nav="chart">
+                <span class="nav-step">2</span>
+                <span class="nav-text">CHART</span>
+              </a>
+            </li>
+            <li>
+              <a data-nav="surface">
+                <span class="nav-step">3</span>
+                <span class="nav-text">SURFACE</span>
+              </a>
+            </li>
+            <li>
+              <a data-nav="about">
+                <span class="nav-step">4</span>
+                <span class="nav-text">ABOUT</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+
+    <main class="page-main" id="main">
+      <div class="content-rail" id="content-rail">
+
+        <!-- Section: React -->
+        <section class="section" aria-labelledby="react">
+          <div class="container pad-vt">
+            <div class="cols-2" style="place-items: center;">
+              <header>
+                <h2 class="section-heading heading--display" style="flex-direction: row; margin-bottom: 1rem;">
+                  <span class="heading-main">Apply</span>
+                  <span class="heading-accent" style="margin: 8px 0 0 -4px;">tracker</span>
+                </h2>
+                <p>Developed and staged a React application with AI-assisted workflows, including theming, design system alignment, and SVG/CSS-based icon implementation.</p>
+                <div>
+                <a class="primary-btn-small" href="https://angelawallace.net/apply-tracker/" target="_blank">Launch web app <!--<img src="assets/icons/icon-ui_chevron-up-right.svg" alt="opens in new tab" />--></a>
+                </div>
+              </header>
+              <div role="list" aria-label="Service cards">
+                <img style="width: 600px;" src="assets/apps/apply-tracker-mockup.webp" alt="Apply Tracker App by Angela Wallace" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Chart -->
+        <section class="section" data-section="projects">
+          <div class="container">
+            <header class="layout-section-header row">
+              <h2 class="section-heading heading--display">
+                <span class="heading-main">Visualization</span>
+                <span class="heading-accent">chart</span>
+              </h2>
+              <!--Component: Toggle Switch -->
+              <div class="toggle-switch">
+                <ul>
+                  <li class="active"><a>Process</a></li>
+                  <li><a>Chart</a></li>
+                </ul>
+              </div>
+              <!-- end Toggle Switch -->
+            </header>
+            <div class="projects-wrapper">
+
+              <!--Toggle container 1 of 2: Project List -->
+              <div class="toggle-wrapper" data-visible="true">
+                <div class="container pad-vt">
+                  <div>
+                    <p>
+                      <!--<a href="assets/process/plot-chart/plot-chart-interaction.png" class="lightbox-trigger">-->
+                      <img class="inline-image" src="assets/process/plot-chart/plot-chart-interaction.png" alt="Plot chart interaction designs" /><!--</a>-->
+                      Built a modular scatter plot using a three-layer architecture: JSON data, SVG projection, and reusable JavaScript components. Defined layout, hierarchy, and interaction logic upfront, then used AI to accelerate implementation—ensuring predictable behavior, precise rendering, and alignment between design intent and front-end output.
+                      </p>
+                      <!--
+                      <p>Rather than generating the experience, AI supported the execution—mapping predefined rules for scaling, positioning, and responsiveness into code. This made it possible to iterate quickly without compromising clarity or introducing inconsistencies across states.</p>
+                      <p>The result is an interactive chart built on deliberate structure, where AI enhances speed but the design decisions—hierarchy, focus, and user flow—remain intentional and fully directed.</p>-->
+                  </div>
+                </div>
+              </div>
+              <!-- Toggle container 2 of 2: Plot Chart -->
+              <div class="toggle-wrapper" data-visible="false">
+                <div class="chart-container section-inner">
+                    <div class="y-axis-labels">
+                        <span>5</span>
+                        <span>4</span>
+                        <span>3</span>
+                        <span>2</span>
+                        <span>1</span>
+                    </div>
+                    <div id="chart" role="img" aria-labelledby="chart-title chart-desc"></div>
+                    <div class="x-axis-label">Year</div>
+                </div>
+                <!--<div class="plot-bottom">
+                  <aside class="chart-legend" aria-labelledby="chart-legend-title">
+                    <h3 id="chart-legend-title" class="visually-hidden">Chart legend</h3>
+                    <dl>
+                      <dt data-icon="→">Year</dt>
+                      <dt data-icon="↑">Complexity</dt>
+                      <dt data-icon="↔">Deliverables</dt>
+                    </dl>
+                  </aside>
+                  <div>
+                    <h2 id="chart-title">
+                      Design work timeline</h2>
+                  </div>
+                </div>-->
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Section: Surface -->
+        <section class="section" aria-labelledby="services-title">
+          <div class="container pad-vt cols-2">
+            <header>
+              <h2 class="section-heading heading--display" style="margin-bottom: 1rem;">
+                <span class="heading-main">Surface</span>
+                <span class="heading-accent">visualization</span>
+              </h2>
+              <p class="align-right">Intent: Invite user to explore and engage with the product.</p>
+            </header>
+            
+            <div class="cards" role="list" aria-label="Service cards">
+              
+              <!-- VISUALIZATION LAYER w Nodes -->
+              <div class="intro-viz" aria-hidden="true">
+                
+                <!-- SURFACE -->
+                <div class="intro-surface">
+                  <div class="surface-motion" data-surface>
+                    
+                    <div class="surface-content">
+                      <img src="assets/surface/surface_face.svg" class="surface-face" alt="Surface face" />
+                      <img src="assets/surface/surface_edge.svg" class="surface-edge" alt="Surface edge" />
+                    </div>
+                    
+                  </div>
+                </div>
+                
+                <!-- NODES -->
+                <div class="intro-nodes">
+                  <span class="node" data-node></span>
+                  <span class="node" data-node></span>
+                  <span class="node" data-node></span>
+                  <span class="node" data-node></span>
+                  <span class="node" data-node></span>
+                </div>
+                
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: About the lab -->
+        <section class="section" aria-labelledby="about-title">
+          <div class="container" style="padding: 0;">
+            <div class="media about">
+
+              <figure>
+                <img 
+                  class="ph-media"
+                  src="assets/process/node-projection/node-projection-process_thumb.png"
+                  alt="Node projection process"
+                  loading="lazy"
+                />
+              </figure>
+
+              <!-- RIGHT COLUMN -->
+              <article style="padding: 0 20px;">
+                <h2 id="about-title" class="section-heading heading-display" style="flex-direction: row;">
+                  <span class="heading-main">About</span>
+                  <span class="heading-accent">the lab</span>
+                </h2>
+
+                <p>I use AI to implement complex design solutions within real-world constraints, exercising craft,  judgement, and UX methodology to delight users with rich interactive experiences.</p>
+                <p style="display: none;">I'm passionate about balancing precision, interactivity, and context to refine product experiences and drive results that scale and evolve over time.</p>
+                <!-- TO DO: Schedule conversation banner 
+                <div class="banner--inline-contact">
+                  <h4>Want to collaborate on a project?</h4>
+                  <a class="link-btn" href="mailto:angie@angelawallace.net">Schedule a conversation</a>
+                </div>
+              -->
+              </article>
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- =========================================================
+     LAYER 3 — CASE STUDY OVERLAY (Sibling Overlay)
+     Hidden by default. No behavior implied here.
+    ========================================================= -->
+    <div class="layer-3-overlay" id="layer-3-overlay" aria-hidden="true">
+
+      <!-- Almost-black frame (no padding) -->
+      <div class="layer-3-frame">
+        <!-- Close button (top-right) -->
+        <button
+          class="layer-3-close"
+          id="layer-3-close"
+          aria-label="Close case study"
+          type="button"
+        >
+          ×
+        </button>
+
+        <!-- Watermark logo (bottom-right) -->
+        <div class="layer-3-watermark" aria-hidden="true">
+          <img src="assets/AWD-sticky-logo.svg" alt="Angela Wallace Design" class="logo">
+        </div>
+
+      </div>
+
+      <!-- White stage (scroll container) -->
+      <div class="layer-3-stage">
+        <article class="case-study layer-3" id="case-study-root">
+
+          <!-- Case study content gets injected here -->
+
+        </article>
+      </div>
+      
+    </div>
+
+
+
+
+  <!-- Data rendering logic -->
+  <script type="module" src="scripts/data.js"></script>
+  <!-- Load chart logic -->
+  <script type="module" src="scripts/chart.js?v=20260111"></script>
+
+  <script type="module" src="scripts/surface.js"></script>
+
+  <!-- Load navigation logic -->
+  <script type="module" src="scripts/navigation.js"></script>
+</body>
+</html>

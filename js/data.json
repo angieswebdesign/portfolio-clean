@@ -1,0 +1,247 @@
+[
+  {
+    "id": "florida-blue-data-sharing",
+    "featured": true,
+    "layout": "right",
+    "heading": {
+      "title": "Privacy & Data Interface",
+      "main": "Privacy & Data",
+      "accent": "interface"
+    },
+    "year": 2023,
+    "users": 6000000,
+    "complexity": 4,
+    "opacity": 0.8,
+    "hasCaseStudy": true,
+    "htmlInclude": "includes/case-studies/data-sharing.html",
+    "meta": {
+      "type": "Regulated Platform Design",
+      "client": "Florida Blue",
+      "role": "Lead Designer",
+      "impact": "Designed a compliant user interface for managing sensitive data access, enabling transparency and reducing risk in regulated environments.",
+      "disciplines": "Interface design, Product iteration, Agile teams",
+      "notes": "Highly regulated data-sharing control interface for sensitive information",
+      "caption": "Above: Data-sharing table",
+      "imageUrl": "/assets/work/fb/data-sharing/data-sharing-thumb.png",
+      "featuredUrl": "/assets/work/fb/data-sharing/data-sharing-hero.png"
+    }
+  },
+  {
+    "id": "AMResorts-multi-platform-app",
+    "featured": true,
+    "heading": {
+      "title": "Multi-Resort App",
+      "main": "Multi-Resort",
+      "accent": "app"
+    },
+    "year": 2017,
+    "users":350000,
+    "complexity": 5,
+    "opacity": 0.8,
+    "hasCaseStudy": false,
+    "htmlInclude": "/includes/case-studies/layer3-test.html",
+    "meta": {
+      "type": "Enterprise Platform",
+      "client": "AMResorts",
+      "role": "UI Designer",
+      "impact": "Reduced rework and improved delivery efficiency by aligning UI patterns with front-end implementation early in the product lifecycle.",
+      "disciplines": "Visual consistency, Cross-platform UI, Design-to-development handoff",
+      "notes": "Contributed interaction and visual design to a large-scale, multi-platform hospitality app spanning pre-arrival, on-property, and in-transit guest experiences across multiple luxury resort brands. Delivered high-fidelity UI systems adaptable across mobile, tablet, and on-property contexts while collaborating closely with product and development teams. Supported system consistency, scalability, and brand differentiation across a complex ecosystem of travel touchpoints.",
+      "caption": "Above: AMResorts Zoëtry Wellness & Spa Resorts App",
+      "imageUrl": "/assets/work/allin/zoetry-thumb-wide.jpg",
+      "featuredUrl": "/assets/work/allin/amresorts-upscaled-hero.png"
+    }
+  },
+{
+    "id": "florida-blue-payments-experience",
+    "featured": true,
+    "heading": {
+      "title": "Payments Experience",
+      "main": "Payments",
+      "accent": "experience"
+    },
+    "year": 2023,
+    "users": 2000000,
+    "complexity": 5,
+    "opacity": 1.0,
+    "hasCaseStudy": true,
+    "htmlInclude": "/includes/case-studies/payments-experience.html",
+    "meta": {
+      "type": "Enterprise Platform",
+      "client": "Florida Blue",
+      "role": "Visual designer",
+      "impact": "Increased payment conversion by 30% by redesigning key payment flows and improving UI clarity within the dashboard experience.",
+      "disciplines": "Design systems, Accessibility, Cross-functional collaboration",
+      "notes": "Led production-ready visual and UI design across web, mobile apps, and AI chat experiences in a highly regulated healthcare environment. Designed and maintained WCAG 2.1–compliant components, layouts, and visual systems supporting marketing, product, and communications initiatives. Partnered cross-functionally with UX, Product, Engineering, Content, and Marketing to deliver dev-ready designs with minimal oversight, balancing accessibility, brand integrity, and speed at enterprise scale.",
+      "caption": "Above: Florida Blue Mobile App",
+      "imageUrl": "/assets/work/fb/payments/payments-thumb.jpg",
+      "featuredUrl": "/assets/work/fb/payments/payments_1.png"
+    }
+  },
+  {
+    "id": "allin-social-media-feature",
+    "featured": false,
+    "heading": {
+      "title": "Communication Feature",
+      "main": "Communication",
+      "accent": "feature"
+    },
+    "year": 2019,
+    "users": 1000000,
+    "complexity": 4,
+    "opacity": 1.0,
+    "hasCaseStudy": false,
+    "htmlInclude": "/includes/case-studies/allin-social-feature.html",
+    "meta": {
+      "type": "Enterprise Platform",
+      "client": "Allin Interactive",
+      "role": "UX/UI Designer",
+      "impact": "Increased user satisfaction by 40% by designing an app feature allowing offshore guests to communicate out-of-network",
+      "disciplines": "User flows, Interaction design, wireframes & prototypes",
+      "notes": "Designed and shipped a scalable social communication feature with cross-functional teams within a proprietary cruise app operating on a bandwidth-constrained ship network. Created wireframes, interaction flows and native visual assets, updated development repositories, and validated builds across emulators and actual devices.",
+      "caption": "Above: App feature wireframes",
+      "imageUrl": "/assets/work/allin/communication-feature-thumb.png",
+      "featuredUrl": "/assets/work/allin/communication-feature-thumb.png"
+    }
+  },
+  {
+    "id": "outside-in-art-exhibition-campaign",
+    "featured": false,
+    "heading": {
+      "title": "Exhibition Creative Direction",
+      "main": "Creative ",
+      "accent": "direction"
+    },
+    "year": 2017,
+    "users": 5000,
+    "complexity": 3,
+    "opacity": 0.3,
+    "hasCaseStudy": false,
+    "meta": {
+      "type": "Non-Profit",
+      "client": "Art and Culture Center/Hollywood",
+      "role": "Design & Web Manager",
+      "disciplines": "Brand consistency, Print & digital production, Vendor coordination",
+      "notes": "Designed and executed a multi-platform exhibition campaign spanning print, digital, web, and email to promote a gallery exhibition within the South Florida arts community. Delivered cohesive visual storytelling across Miami Rail magazine ads, brochures, digital placements, and a custom-coded landing page, balancing curatorial intent with audience reach and production constraints.",
+      "caption": "Artwork by London Police",
+      "imageUrl": "/assets/work/acch/outsideIn_miamiRailAd.jpg"
+    }
+  },
+    {
+    "id": "allin-interactive-material-design-skin",
+    "featured": true,
+    "heading": {
+      "title": "Material Interface Design",
+      "main": "Material",
+      "accent": "interface design"
+    },
+    "year": 2014,
+    "users": 50000,
+    "complexity": 2,
+    "opacity": 0.4,
+    "hasCaseStudy": false,
+    "meta": {
+      "type": "Material Design",
+      "client": "Allin Interactive",
+      "role": "UI Design",
+      "impact": "Developed a flexible UI concept that allowed real-time interface customization, supporting sales conversations and product adaptability.",
+      "disciplines": "User interface design, Prototyping",
+      "notes": "Designed a custom Material Design based visual skin for an internal sales and client-facing prototype platform. Focused on visual clarity, brand adaptability, and front-end feasibility to support rapid demos, stakeholder presentations, and iterative product conversations across hospitality and entertainment clients.",
+      "caption": "Above: AWD custom skin for internal sales platform",
+      "imageUrl": "/assets/work/allin/charcoal.jpg",
+      "featuredUrl": "/assets/work/allin/allin-charcoal_android.png"
+    }
+  },
+    {
+    "id": "exposed-exhibition-campaign",
+    "featured": false,
+    "heading": {
+      "title": "Exhibition Creative Direction",
+      "main": "Creative",
+      "accent": "direction"
+    },
+    "year": 2017,
+    "users": 5000,
+    "complexity": 3,
+    "opacity": 0.8,
+    "hasCaseStudy": false,
+    "meta": {
+      "type": "Non-Profit",
+      "client": "Art and Culture Center/Hollywood",
+      "role": "Design & Web Manager",
+      "disciplines": "Creative direction, Integrated campaign design, Multi-channel production",
+      "notes": "Led visual design across print, digital, web, and social channels for a major exhibition campaign. Delivered catalogue design, magazine ads, digital placements, website assets, and email communications, ensuring visual cohesion while coordinating with multiple stakeholders, vendors, and production timelines.",
+      "caption": "Above: Catalouge design by AWD",
+      "imageUrl": "/assets/work/acch/exposed.jpg"
+    }
+  },
+  {
+    "id": "citrix-systems",
+    "featured": false,
+    "heading": {
+      "title": "Web Content Migration",
+      "main": "Web Content",
+      "accent": "migration"
+    },
+    "year": 2011,
+    "users": 100000,
+    "complexity": 2,
+    "opacity": 0.6,
+    "hasCaseStudy": false,
+    "meta": {
+      "type": "Enterprise Platform",
+      "client": "Citrix Systems",
+      "role": "Web Content Migration Specialist",
+      "disciplines": "HTML page reconstruction, Semantic markup, Accessibility compliance, Cross-browser QA",
+      "notes": "Supported a large-scale enterprise web migration by rebuilding legacy HTML pages into modern, standards-compliant layouts using semantic HTML and CSS. Ensured brand consistency, accessibility compliance, and cross-browser reliability while improving content structure, metadata, and long-term maintainability during a high-volume migration effort.",
+      "caption": "Image credit: Citrix.com",
+      "imageUrl": "/assets/work/citrix/lightbulb.png"
+    }
+  },
+  {
+    "id": "RCCL",
+    "featured": false,
+    "heading": {
+      "title": "Front-end development",
+      "main": "Front-end",
+      "accent": "development"
+    },
+    "year": 2010,
+    "users": 100000,
+    "complexity": 4,
+    "opacity": 0.6,
+    "hasCaseStudy": false,
+    "meta": {
+      "type": "Enterprise Platform",
+      "client": "Professional Golf Association",
+      "role": "Frontend web developer",
+      "disciplines": "Design-to-code translation, Cross-browser support, Performance optimization",
+      "notes": "Modernized legacy, table-based web pages into semantic HTML and CSS for high-traffic cruise brand websites. Partnered with business and IT stakeholders to recommend front-end best practices, ensure cross-browser performance, and translate marketing designs into production-ready code under aggressive timelines.",
+      "caption": "Webpage shipped by AWD for RCCL",
+      "imageUrl": "/assets/work/rccl/celebrity-topChef-thumb.jpg"
+    }
+  },
+  {
+    "id": "Kaplan",
+    "featured": false,
+    "heading": {
+      "title": "Governance Documentation",
+      "main": "Web",
+      "accent": "governance"
+    },
+    "year": 2009,
+    "users": 100000,
+    "complexity": 3,
+    "opacity": 0.5,
+    "hasCaseStudy": false,
+    "meta": {
+      "type": "Enterprise Platform",
+      "client": "Kaplan University",
+      "role": "Web Content Governance",
+      "disciplines": "Governance frameworks, Content inventory, Editorial guidelines",
+      "notes": "Created a content inventory and governance system to extract and standardize reusable assets across 88 national websites during a large-scale enterprise migration. Collaborated with marketing, SEO, and leadership teams to establish web governance practices and performed QA across a multi-site rebrand initiative.",
+      "caption": "Web Governance Online Documentation by AWD",
+      "imageUrl": "/assets/work/kaplan/kaplan.png"
+    }
+  }
+]

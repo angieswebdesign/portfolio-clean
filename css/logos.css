@@ -1,0 +1,86 @@
+/* --------------------------------------
+   Animated Logo Scroll
+   -------------------------------------- */
+
+.logo-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.logo-grid {
+  display: flex;
+  gap: 1.5rem;
+  /*animation: scroll-left 60s linear infinite;*/
+  align-items: center;
+  flex-direction:row;
+  margin-top: 1rem;
+  padding: 20px 0;
+}
+
+.logo-grid img {
+  max-height: 70px;
+  object-fit: contain;
+  flex: 0 1 100px;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.logo-grid img.descale {
+  max-height: 30px;
+}
+.logo-grid img.upscale {
+  max-height: 90px;
+}
+.logo-grid img:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ---- Edge fade ---- */
+.logo-marquee {
+  position: relative;
+  overflow: hidden;
+
+  /* Fade edges */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+/* ------------------------------------
+   Device Breakpoint Styles
+-------------------------------------*/
+
+/* Animation only below 1024px (tablet & mobile) */
+@media (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+  .logo-grid {
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    animation: scroll-left 45s linear infinite;
+  }
+}

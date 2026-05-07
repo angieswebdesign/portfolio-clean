@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AWD Case Study - 3rd-Party Data Sharing</title>
+    <!-- "Inter" Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <!-- Layer 3 Case Studies -->
+    <link rel="stylesheet" href="/css/case-study-layout.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+</head>
+<body id="top">
+
+
+    <div class="bottom-nav__right">
+        <a href="#top">Back to top</a>
+    </div>
+    
+    <header class="global-header sub-nav">
+      <div class="header-inner container">
+        <div class="back-link">
+            
+                <a class="back" href="/"><img class="icon--back" src="/awd-lab/assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a>
+        
+        </div>
+        <nav class="global-nav" aria-label="Primary">
+          <ul class="global-nav__list" id="navList">
+            <li>
+              <a href="#problem">
+                <span class="nav-step">1</span>
+                <span class="nav-text">PROBLEM</span>
+              </a>
+            </li>
+            <li>
+              <a href="#challenge">
+                <span class="nav-step">2</span>
+                <span class="nav-text">CHALLENGE</span>
+              </a>
+            </li>
+            <li>
+              <a href="#solution">
+                <span class="nav-step">3</span>
+                <span class="nav-text">SOLUTION</span>
+              </a>
+            </li>
+            <li>
+              <a href="#prototype">
+                <span class="nav-step">4</span>
+                <span class="nav-text">PROTOTYPE</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <!-- Layer 2: Project Overlay -->
+    <div id="modal-root" class="modal-overlay"></div>
+    
+    <main id="main" class="page-main">
+        <article class="layer-3 case-study-layout">
+            <!-- Parent Blocks = Top-level content containers -->
+
+            <!-- Parent Block 1 of 3 -->
+            <header>
+                <img src="/assets/work/fb/data-sharing/data-sharing-hero.png" alt="3rd Party Data Sharing Hero">
+                <div>
+                    <h1 class="section-heading">
+                        <span class="heading-main">Privacy & Data</span>
+                        <span class="heading-accent">interface</span>
+                    </h1>
+                    <p class="cs-eyebrow">Case Study</p>
+                </div>
+            </header>
+            
+            <!-- Parent Block 2 of 3 -->
+            <main class="case-body">
+                <blockquote class="pattern-callout--hero">
+                Designing clarity for user-controlled health data within strict system constraints.
+                </blockquote>
+                
+                <!-- Section 1 (5/4 2-Column Split) -->
+                <section id="problem" class="case-section case-overview">
+                    <div class="overview-content">
+
+                        <header class="section-header">
+                        <h2>The Problem</h2>
+                        </header>
+
+                        <p>
+                            Needed to clearly understand and be given the ability to share and control their sensitive Personal Health Information (PHI) data with their 3rd party apps.
+                        </p>
+
+                        <ul class="list list--check">
+                            <h3 class="list__title">Key Considerations</h3>
+                        <li>
+                            Multiple actors
+                        </li>
+                        <li>
+                            Asynchronous data delays
+                        </li>
+                        <li>
+                            Visibility of system status unclear
+                        </li>
+                        <li>
+                            Legal copy visibility required
+                        </li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <aside class="component-summary">
+                            <h3>Summary</h3>
+                            <dl>
+                            <dt>Role</dt>
+                            <dd>Lead Designer</dd>
+                            <dt>Team</dt>
+                            <dd>UX, Product, Compliance, Content, Engineering</dd>
+                            <dt>Scope</dt>
+                            <dd>UI within legacy system</dd>
+                            <dt>Environment</dt>
+                            <dd>Healthcare / regulated / role-based access</dd>
+                            </dl>
+                            <!-- Phase IV Implementation
+                            <div class="summary-media"></div>-->
+                        </aside>
+                    </div>
+
+                </section>
+                
+                <!-- Section: Repeatable (Image w copy + bullets + result) -->
+                <section id="context" class="case-section">
+                    
+                        <div class="pattern-intro thumb">
+                            <header class="section-header">
+                                <h3>Context</h3>
+                            </header>
+                            <div class="intro-layout">
+
+                                <!-- (add/remove .thumb to .intro-thumb to hide/show) -->
+                                <div class="intro-thumb thumb">
+                                    <img src="/assets/work/fb/data-sharing/data-sharing-table_thumb.png" alt="user actions">
+                                </div>
+                                <p>
+                                    Members needed a clear way to see which third-party apps were accessing their protected health information, understand each app’s status, and stop sharing when needed. The page also had to include a large amount of required legal copy above the table, keep all actions on a single page, and use only existing components. I simplified this compliance-heavy experience while keeping the interface easy to scan and act on.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="list list-bulleted">
+                            <h3 class="list__title">Design Constraints</h3>
+                            <ul class="list__items">
+                                <li>Limited design and development budget</li>
+                                <li>Required legal copy must remain visible at all times</li>
+                                <li>Scan, review, and modify app-sharing data with minimal actions</li>
+                            </ul>
+                        </div>
+                        
+                        <blockquote class="component-blockquote result">
+                            <span class="result-label">Result</span>
+                            <p>
+                                Redesigned a simplified interface into a structured solution where a member's app statuses could be scanned, updated, and managed while maintaining required legal disclosures.
+                            </p>
+                        </blockquote>
+                        
+                </section>
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->               
+
+                <!-- Section: Repeatable (Image w copy + bullets + result) -->
+                <section id="constraints" class="case-section">
+                    
+                        <div class="pattern-intro thumb">
+                            <header class="section-header">
+                                <h3>Constraints</h3>
+                            </header>
+                            <div class="intro-layout">
+
+                                <div>
+                                <p>
+                                    <b>Visual design was limited by system + org realities.</b> 
+                                
+                                    As part of the discovery phase, I designed initial UI concepts for the member audit experience to test feasibility and shape the user journey. I also validated UI states and accessibility, helping surface technical constraints and edge cases that informed the compliant-state direction that followed.
+
+                                </p>
+
+                                <div class="list list-bulleted">
+                                    <h3 class="list__title">Design Constraints</h3>
+                                    <ul class="list__items">
+                                        <li>Legacy table required (no new components)</li>
+                                        <li>Fixed typography + deprecated UI kit</li>
+                                        <li>Backend dependencies blocked real-time accuracy</li>
+                                        <li>Audit visibility tied to login state</li>
+                                        <li>No funding for redesign</li>
+                                    </ul>
+                                </div>
+                                <!-- (add/remove .thumb to .intro-thumb to hide/show) -->
+                                
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <blockquote class="component-blockquote result">
+                            <span class="result-label">Result</span>
+                            <p>
+                                Solution had to work within, not around, tight enterprise constraints
+                            </p>
+                        </blockquote>
+                        
+                </section>
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                <!-- Section: Repeatable (Image w copy + bullets + result) -->
+                <section id="challenge" class="case-section">
+                    
+                        <div class="pattern-intro thumb">
+                            <header class="section-header">
+                                <h2>Challenge</h2>
+                            </header>
+                            <div class="intro-layout">
+
+                                <!-- (add/remove .thumb to .intro-thumb to hide/show) -->
+                                <div class="intro-thumb thumb">
+                                    <img src="/assets/work/fb/data-sharing/data-sharing-thumb.png" alt="wireframe exerpt from new social media feature">
+                                </div>
+                                <p>
+                                    In order to meet strict design requirements within a legal deadline with limited patterns and components, an accessible and legacy UI kit validated pattern was used (table) to give members quick legibility of all data in a limited area and ownership of taking actions.
+                                    </p>
+                                    <p>
+                                    Components used: Badge (to easily scan app status), along with variable name + timestamp (who took the action in multi-user scenarios).
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="list list-bulleted">
+                            <h3 class="list__title">Requirements:</h3>
+                            <ul class="list__items">
+                                <li>Show current state vs pending state</li>
+                                <li>Clarify who took action (member vs rep)</li>
+                                <li>Indicate delays without breaking confidence</li>
+                                <li>Keep legal content always accessible</li>
+                            </ul>
+                        </div>
+                        
+                        <blockquote class="component-blockquote result">
+                            <span class="result-label">Goal</span>
+                            <p>
+                                Build user trust in taking actions with their sensitive personal data
+                            </p>
+                        </blockquote>
+                        
+                </section>
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                <!-- Section: Repeatable (Image w copy + bullets + result) -->
+                <section id="Interaction" class="case-section">
+                    
+                        <div class="pattern-intro thumb">
+                            <header class="section-header">
+                                <h3>Interaction Understanding</h3>
+                            </header>
+                            <div class="intro-layout">
+
+                                <!-- (add/remove .thumb to .intro-thumb to hide/show) -->
+                                <div class="intro-thumb thumb">
+                                    <a href="/assets/work/fb/data-sharing/3rd-Party_user-flows.pdf" target="_blank"><img src="/assets/work/fb/data-sharing/user-flow_thumb.png" alt="user flows"></a>
+                                </div>
+                                <p>
+                                    <b>Mapped role-based behavior across scenarios.</b> The complete user flow was shaped through alignment with cross functional teams to understand role-based state behavior and access to real-time data following user actions. As a result, a simplified user variable and timestamp solution bridged the complexity of syncing user and API data on the back end, enabling an accurate and seamless reflection of action states on the web front end. <!--<a class="text-link" href="/assets/work/fb/data-sharing/3rd-Party_user-flows.pdf" target="_blank">Launch user flows <span class="cta__button-icon"></span></a>-->
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="list list-bulleted">
+                            <h3 class="list__title">Design choices considered:</h3>
+                            <ul class="list__items">
+                                <li>Member vs personal representative flows</li>
+                                <li>Visibility changes based on login state</li>
+                                <li>Action ownership not always shared across users</li>
+                                <li>System delay vs. perceived control (edge case)</li>
+                            </ul>
+                        </div>
+                        
+                        <blockquote class="component-blockquote result">
+                            <span class="result-label">Result</span>
+                            <p>
+                                Complexity lived in role-based state behavior.
+                            </p>
+                        </blockquote>
+                        
+                </section>
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+                <!-- Section: Repeatable (Image w copy + bullets + result) -->
+                <section id="solution" class="case-section">
+                    
+                        <div class="pattern-intro thumb">
+                            <header class="section-header">
+                                <h2>Solution</h2>
+                            </header>
+                            <div class="intro-layout">
+
+                                <!-- (add/remove .thumb to .intro-thumb to hide/show) -->
+                                <div class="intro-thumb thumb">
+                                    <img src="/assets/work/fb/data-sharing/data-sharing-thumb.png" alt="wireframe exerpt from new social media feature">
+                                </div>
+                                <p>
+                                    I worked closely in cross-functional team meetings throughout product increment (PI) agile sprints, building an understanding of each team’s responsibilities, constraints, and feasibility considerations through collaboration. That context shaped a structured, simplified interface that allows members to quickly scan which apps are accessing their sensitive PHI and manage permissions through simple controls. Every decision was grounded in the realities the design needed to satisfy, including federally required legal visibility, ensuring the experience remained clear, compliant, and avoided the risks of premature design decisions.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="list list-bulleted">
+                            <h3 class="list__title">Product alignment:</h3>
+                            <ul class="list__items">
+                                <li>Reorganized table for scanability</li>
+                                <li>Grouped actions + status together</li>
+                                <li>Introduced clearer status labeling (within constraints)</li>
+                                <li>Reduced cognitive load through structure, not visuals</li>
+                                <li>Maintained compliance + system integrity</li>
+                            </ul>
+                        </div>
+                        
+                        <blockquote class="component-blockquote result">
+                            <span class="result-label">Result</span>
+                            <p>
+                                Improved clarity and control of PHI data sharing within strict cross-functional and federally required constraints.
+                            </p>
+                        </blockquote>
+                        
+                </section>
+
+
+
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                <!-- ~~~~~~~~~~~~~~~ SECTION BREAK ~~~~~~~~~~~~~~~ --
+                
+
+                <section id="solution" class="case-section">
+                    <div class="pattern-intro">
+                        <header class="section-header">
+                            <h2>Prototype</h2>
+                        </header>
+                        <div class="intro-layout">
+                            <div class="intro-thumb">
+                                <img src="/assets/work/allin/feature/social-wireframes_4.png" alt="wireframe exerpt from new social media feature">
+                            </div>
+                            <p>
+                                Prototype to validate interaction logic.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="list list-bulleted">
+                        <h3 class="list__title">Validations:</h3>
+                        <ul class="list__items">
+                            <li>Simulated role switching (member / rep)</li>
+                            <li>Explored state transitions + feedback</li>
+                            <li>Tested clarity of actions vs outcomes</li>
+                        </ul>
+                    </div>
+
+                </section>
+                !-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                
+                <!-- Solution with inline images -->
+                <section id="solution" class="case-section">
+                    <div class="pattern-intro">
+                        <header class="section-header">
+                            <h3>Design Walkthrough</h3>
+                        </header>
+                        <div class="intro-layout">
+                            <div class="intro-thumb">
+                                <img src="/assets/work/allin/feature/social-wireframes_4.png" alt="wireframe exerpt from new social media feature">
+                            </div>
+                            <p>
+                                The following visuals describe the process of making design decisions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Full width images with caption -->
+                    <div class="pattern-slides">
+
+                        
+                                <figure class="slide lightbox__content">
+                                    <a 
+                                        href="/assets/work/fb/data-sharing/data-sharing_BEFORE_lg.webp" class="project-card-thumb" data-lightbox
+                                    >
+                                        <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_1_BEFORE.png" alt="3rd Party Data Sharing initial design">
+                                    </a>
+                                    <figcaption class="slide-caption">
+                                        <span>Fig. 1</span>
+                                        <b>Initial Concept.</b> <!--Early interface exploration of designing a single page for managing provider data-sharing settings, with session-initiated legal copy accessible via modal. (-->Due to a change in scope, this solution was not possible to execute.
+                                    </figcaption>
+                                </figure>
+                           
+
+
+                        <figure class="slide">
+                            <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_3.png" alt="3rd Party Data Sharing Slide 3">
+                            <figcaption class="slide-caption">
+                                <span>Fig. 2</span>
+                                <b>Content Structure.</b> Required copy must wrap the data-sharing area, always be visible, and satisfy business content ordering constraints.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="slide">
+                            <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_4.png" alt="3rd Party Data Sharing Slide 4">
+                            <figcaption class="slide-caption">
+                                <span>Fig. 3</span>
+                                <b>Table as Primary Control.</b> Due to legacy kit constraints, a table component becomes the central UI for reviewing status and managing permissions.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="slide">
+                            <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_5.png" alt="3rd Party Data Sharing Slide 5">
+                            <figcaption class="slide-caption">
+                                <span>Fig. 4</span>
+                                <b>Structured Table Layout.</b> Column hierarchy clarifies application status, sharing state, and available actions.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="slide">
+                            <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_6.png" alt="3rd Party Data Sharing Slide 6">
+                            <figcaption class="slide-caption">
+                                <span>Fig. 5</span>
+                                <b>Interaction Model.</b> Inline actions allow members to review and modify data-sharing permissions without leaving the page.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="slide">
+                            <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_7.png" alt="3rd Party Data Sharing Slide 7">
+                            <figcaption class="slide-caption">
+                                <span>Fig. 6</span>
+                                <b>State Change.</b> Updated row state confirms a change to data-sharing permissions while maintaining visibility of other connected applications.
+                            </figcaption>
+                        </figure>
+
+                        <figure class="slide">
+                            <img src="/assets/work/fb/data-sharing/fb_3rd-party-slide_8_AFTER.png" alt="3rd Party Data Sharing Slide 8">
+                            <figcaption class="slide-caption">
+                                <span>Fig. 7</span>
+                                <b>Final design.</b> Single-page interface combining disclosures, status indicators, and actions to clearly manage third-party data sharing.
+                            </figcaption>
+                        </figure>
+
+                    </div>
+
+                </section>
+
+
+                <section id="prototype">
+                    <div class="button-row">
+                        
+                        <a class="cta__button" href="https://www.figma.com/proto/3mVROayQqbFJwz27yX3AaM/FB?node-id=109-148&t=gswB4XyS39M4aRef-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=109%3A148&show-proto-sidebar=1" target="_blank">
+                            <span class="cta__button-label">Solution prototype</span>
+                            <span class="cta__button-icon">
+                                <img
+                                src="../../assets/icons/icon-chevron-up-right_pink.svg"
+                                alt="Chevron up right"
+                                aria-hidden="true"
+                                />
+                            </span>
+                        </a>
+
+                        <a class="cta__button" href="https://youtu.be/wD66pRfIGA8" target="_blank">
+                            <span class="cta__button-label">Deeper dive video</span>
+                            <span class="cta__button-icon">
+                                <img
+                                src="../../assets/icons/icon-chevron-up-right_pink.svg"
+                                alt="Chevron up right"
+                                aria-hidden="true"
+                                />
+                            </span>
+                        </a>
+                    </div>
+                </section>
+                
+                
+                <!-- Repeatable section (add/remove .thumb to .intro-thumb to hide/show) -->
+                <section class="case-section">
+                    
+                    <div class="pattern-intro">
+                        <header class="section-header">
+                            <h2>Reflection</h2>
+                        </header>
+                        <div class="intro-layout">
+                            <div class="intro-thumb">
+                                <img src="/assets/work/allin/feature/social-wireframes_4.png" alt="wireframe exerpt from new social media feature">
+                            </div>
+                            <p>
+                                This project reflects how I often worked at Florida Blue. As the lead designer on this initiative, I partnered closely with UX, product, compliance, content, and engineering to translate complex requirements into clear, scalable product interfaces. On this effort, I used hierarchy, spacing, status indicators, and structured content to design a system that made sensitive data-sharing information easy to understand while aligning with business goals and compliance requirements.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <section class="case-section">
+
+                    <div class="pattern-reflection">
+                    <p>
+                        “Strong visual design is not decoration. In regulated product spaces, it becomes the structure that helps users understand risk, trust the system, and take action with confidence.”
+                    </p>
+                    </div>
+
+                </section>
+                
+            </main>
+            
+            <!-- Parent Block 3 of 3 -->
+            <footer class="case-footer">
+                <p class="copyright">
+                &copy; 2026 Angela Wallace Design
+                </p>
+            </footer>
+            
+        </article>
+    </main>
+
+    <!-- =========================================================
+    Lightbox Overlay
+    ========================================================= -->
+
+    <div class="lightbox" id="lightbox">
+    <div class="lightbox__inner">
+        <figure class="lightbox__content">
+        <img />
+        <figcaption></figcaption>
+        </figure>
+    </div>
+    </div>
+
+    <!-- =========================================================
+    LAYER 3 — CASE STUDY OVERLAY (Sibling Overlay)
+    Hidden by default. No behavior implied here.
+    ========================================================= -->
+    <div class="layer-3-overlay" id="layer-3-overlay" aria-hidden="true">
+        
+        <!-- Almost-black frame (no padding) -->
+        <div class="layer-3-frame">
+            <!-- Close button (top-right) -->
+            <button
+                class="layer-3-close"
+                id="layer-3-close"
+                aria-label="Close case study"
+                type="button"
+                >
+                ×
+            </button>
+        
+            <!-- Watermark logo (bottom-right) -->
+            <div class="layer-3-watermark" aria-hidden="true">
+                <img src="/assets/AWD-sticky-logo.svg" alt="Angela Wallace Design" class="logo">
+            </div>
+        
+        </div>
+    
+        <!-- White stage (scroll container) -->
+        <div class="layer-3-stage">
+            <article class="case-study-layout layer-3" id="case-study-root">
+                <!-- Case study content gets injected here -->
+            </article>
+        </div>
+    </div>
+
+    <!-- Data rendering logic --
+    <script type="module" src="./scripts/data.js"></script>
+    !-- Preload overlay UI -->
+    <script type="module" src="../../scripts/modal.js"></script>
+    <script src="../../scripts/lightbox.js"></script>
+
+
+    <!-- Load navigation logic --
+    <script type="module" src="./scripts/navigation.js?v=2"></script>-->
+    <script>
+            const nav = document.querySelector('#navList');
+
+            if (nav) {
+                const links = nav.querySelectorAll('a[href^="#"]');
+
+                const map = [...links]
+                .map(link => {
+                    const target = document.querySelector(link.getAttribute('href'));
+                    return target ? { link, target } : null;
+                })
+                .filter(Boolean);
+
+                const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const match = map.find(item => item.target === entry.target);
+                    if (!match) return;
+
+                    if (entry.isIntersecting) {
+                    links.forEach(link => link.classList.remove('is-active'));
+                    match.link.classList.add('is-active');
+                    }
+                });
+                }, {
+                root: null,
+                threshold: 0.5
+                });
+
+                map.forEach(item => observer.observe(item.target));
+            }
+    </script>
+</body>
+</html>
