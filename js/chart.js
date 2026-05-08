@@ -4,7 +4,7 @@ import * as Plot from "https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6/+esm"
 import { openModal } from "./modal.js";
 
 async function loadData() {
-  const response = await fetch("/js/data.json");
+  const response = await fetch("js/data.json");
   return response.json();
 }
 

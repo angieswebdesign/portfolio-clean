@@ -22,7 +22,7 @@ document.addEventListener("click", (e) => {
   openCaseStudy(project);
 });
 
-fetch("js/data.json")
+fetch("./js/data.json")
   .then((res) => res.json())
   .then((projects) => {
     projectsCache = projects;

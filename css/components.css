@@ -404,7 +404,7 @@ a.resume:hover {
   height: 16px;
   flex-shrink: 0;
 
-  background-image: url("../assets/components/icon--ai-default.svg");
+  background-image: url("..assets/components/icon--ai-default.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -414,7 +414,7 @@ a.resume:hover {
 
 /* icon swap */
 .global-nav__button:hover .global-nav__button-icon {
-  background-image: url("../assets/components/icon--ai-hover.svg");
+  background-image: url("..assets/components/icon--ai-hover.svg");
 }
 
 /****** CTA Button *******/
@@ -522,7 +522,7 @@ a.resume:hover {
   height: 24px;
   flex-shrink: 0;
 
-  background-image: url("/awd-lab/assets/icons/icon-chevron-left_inactive.svg");
+  background-image: url("/awd-labassets/icons/icon-chevron-left_inactive.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -530,7 +530,7 @@ a.resume:hover {
 
 /* icon swap */
 a.back:hover .icon--back {
-  background-image: url("/awd-lab/assets/icons/icon-chevron-left_inactive.svg");
+  background-image: url("/awd-labassets/icons/icon-chevron-left_inactive.svg");
 }
 
 /**** CTA variant ****/
@@ -1432,23 +1432,23 @@ footer p {
 }
 
 .pattern-list li:nth-child(1)::before {
-  -webkit-mask-image: url('/assets/icons/pattern-list_run.svg');
-  mask-image: url('/assets/icons/pattern-list_run.svg');
+  -webkit-mask-image: url('assets/icons/pattern-list_run.svg');
+  mask-image: url('assets/icons/pattern-list_run.svg');
 }
 
 .pattern-list li:nth-child(2)::before {
-  -webkit-mask-image: url('/assets/icons/pattern-list_leaf.svg');
-  mask-image: url('/assets/icons/pattern-list_leaf.svg');
+  -webkit-mask-image: url('assets/icons/pattern-list_leaf.svg');
+  mask-image: url('assets/icons/pattern-list_leaf.svg');
 }
 
 .pattern-list li:nth-child(3)::before {
-  -webkit-mask-image: url('/assets/icons/pattern-list_light.svg');
-  mask-image: url('/assets/icons/pattern-list_light.svg');
+  -webkit-mask-image: url('assets/icons/pattern-list_light.svg');
+  mask-image: url('assets/icons/pattern-list_light.svg');
 }
 
 .pattern-list li:nth-child(4)::before {
-  -webkit-mask-image: url('/assets/icons/pattern-list_people.svg');
-  mask-image: url('/assets/icons/pattern-list_people.svg');
+  -webkit-mask-image: url('assets/icons/pattern-list_people.svg');
+  mask-image: url('assets/icons/pattern-list_people.svg');
 }
 */
 
@@ -1465,8 +1465,8 @@ footer p {
   height: 25px;
   background-color: var(--color-accent);
 
-  -webkit-mask-image: url('/assets/icons/quote.svg');
-  mask-image: url('/assets/icons/quote.svg');
+  -webkit-mask-image: url('assets/icons/quote.svg');
+  mask-image: url('assets/icons/quote.svg');
 
   -webkit-mask-size: contain;
   mask-size: contain;

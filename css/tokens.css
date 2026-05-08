@@ -41,8 +41,10 @@
 
 
 /* =========================
-   COLOR
+   LOCAL COLOR TOKENS
+   *****!!! Shared tokens live in /shared/global-tokens.css !!!*****
 ========================= */
+
 
   /* Frame + surfaces */
   --color-frame: #000;
@@ -51,16 +53,6 @@
   --color-surface-muted: #E7DBDD;
   --color-text: #111;
   --color-text-muted: #A7A7A7;
-
-  /* Brand */
-  --color-primary: #000;  /* Core brand / text */
-  --color-secondary: #d9d9d9;  /* Neutral surfaces, dividers */
-  --color-accent:  #FA4D7E;  /* Emphasis / highlights */
-  --color-divider: #D9D9D9;
-
-  /* Interaction */
-  --color-focus:  #D7154D;  /* Focus rings, active states */
-  --color-control: #23CDCD;  /* Controls, affordances */
 
   /* Profile hero background SVG */
   --color-accent-yellow: #FFE066;
