@@ -522,7 +522,7 @@ a.resume:hover {
   height: 24px;
   flex-shrink: 0;
 
-  background-image: url("/awd-labassets/icons/icon-chevron-left_inactive.svg");
+  background-image: url("../assets/icons/icon-chevron-left_inactive.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -530,7 +530,7 @@ a.resume:hover {
 
 /* icon swap */
 a.back:hover .icon--back {
-  background-image: url("/awd-labassets/icons/icon-chevron-left_inactive.svg");
+  background-image: url("../assets/icons/icon-chevron-left_inactive.svg");
 }
 
 /**** CTA variant ****/
@@ -1452,6 +1452,7 @@ footer p {
 }
 */
 
+
 .pattern-callout {
   display: flex;
   gap: 12px;
@@ -1460,6 +1461,7 @@ footer p {
   border-radius: 15px;
 }
 
+/* Recreate .pattern-callout__icon with global svg icons and rename a single 'quote' and rotate via css */
 .pattern-callout__icon {
   width: 25px;
   height: 25px;

@@ -45,15 +45,6 @@
    *****!!! Shared tokens live in /shared/global-tokens.css !!!*****
 ========================= */
 
-
-  /* Frame + surfaces */
-  --color-frame: #000;
-  --color-case-study-frame: #313131;
-  --color-surface: #fff;
-  --color-surface-muted: #E7DBDD;
-  --color-text: #111;
-  --color-text-muted: #A7A7A7;
-
   /* Profile hero background SVG */
   --color-accent-yellow: #FFE066;
   --color-accent-pink: #F8BBD0;

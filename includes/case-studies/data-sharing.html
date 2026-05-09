@@ -28,8 +28,8 @@
       <div class="header-inner container">
         <div class="back-link">
             
-                <a class="back" href="../../"><img class="icon--back" src="../../assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a>
-        
+                <!--<a class="back" href="../../"><img class="icon--back" src="../../assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a>-->
+            <a class="back" href="../../"><span data-icon="chevron" data-icon-size="16" aria-hidden="hidden"></span> <span>Back</span><span> to portfolio</span></a>
         </div>
         <nav class="global-nav" aria-label="Primary">
           <ul class="global-nav__list" id="navList">
@@ -398,9 +398,7 @@
                             <h3>Design Walkthrough</h3>
                         </header>
                         <div class="intro-layout">
-                            <div class="intro-thumb">
-                                <img src="../../assets/work/allin/feature/social-wireframes_4.png" alt="wireframe exerpt from new social media feature">
-                            </div>
+                            
                             <p>
                                 The following visuals describe the process of making design decisions.
                             </p>
@@ -426,7 +424,11 @@
 
 
                         <figure class="slide">
-                            <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_3.png" alt="3rd Party Data Sharing Slide 3">
+                            <a 
+                                href="../../assets/work/fb/data-sharing/fb_3rd-party-slide_3.png" class="project-card-thumb" data-lightbox
+                            > 
+                                <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_3.png" alt="3rd Party Data Sharing Slide 3">
+                            </a>
                             <figcaption class="slide-caption">
                                 <span>Fig. 2</span>
                                 <b>Content Structure.</b> Required copy must wrap the data-sharing area, always be visible, and satisfy business content ordering constraints.
@@ -434,7 +436,11 @@
                         </figure>
 
                         <figure class="slide">
+                            <a 
+                                href="../../assets/work/fb/data-sharing/fb_3rd-party-slide_4.png" data-lightbox
+                            > 
                             <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_4.png" alt="3rd Party Data Sharing Slide 4">
+                        </a>
                             <figcaption class="slide-caption">
                                 <span>Fig. 3</span>
                                 <b>Table as Primary Control.</b> Due to legacy kit constraints, a table component becomes the central UI for reviewing status and managing permissions.
@@ -442,7 +448,11 @@
                         </figure>
 
                         <figure class="slide">
+                            <a 
+                                href="../../assets/work/fb/data-sharing/fb_3rd-party-slide_5.png" data-lightbox
+                            > 
                             <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_5.png" alt="3rd Party Data Sharing Slide 5">
+                            </a>
                             <figcaption class="slide-caption">
                                 <span>Fig. 4</span>
                                 <b>Structured Table Layout.</b> Column hierarchy clarifies application status, sharing state, and available actions.
@@ -450,7 +460,11 @@
                         </figure>
 
                         <figure class="slide">
+                            <a 
+                                href="../../assets/work/fb/data-sharing/fb_3rd-party-slide_6.png" data-lightbox
+                            > 
                             <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_6.png" alt="3rd Party Data Sharing Slide 6">
+                            </a>
                             <figcaption class="slide-caption">
                                 <span>Fig. 5</span>
                                 <b>Interaction Model.</b> Inline actions allow members to review and modify data-sharing permissions without leaving the page.
@@ -458,7 +472,11 @@
                         </figure>
 
                         <figure class="slide">
+                            <a 
+                                href="../../assets/work/fb/data-sharing/fb_3rd-party-slide_7.png" data-lightbox
+                            > 
                             <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_7.png" alt="3rd Party Data Sharing Slide 7">
+                            </a>
                             <figcaption class="slide-caption">
                                 <span>Fig. 6</span>
                                 <b>State Change.</b> Updated row state confirms a change to data-sharing permissions while maintaining visibility of other connected applications.
@@ -466,7 +484,11 @@
                         </figure>
 
                         <figure class="slide">
+                            <a 
+                                href="../../assets/work/fb/data-sharing/fb_3rd-party-slide_8_AFTER.png" data-lightbox
+                            >
                             <img src="../../assets/work/fb/data-sharing/fb_3rd-party-slide_8_AFTER.png" alt="3rd Party Data Sharing Slide 8">
+                            </a>
                             <figcaption class="slide-caption">
                                 <span>Fig. 7</span>
                                 <b>Final design.</b> Single-page interface combining disclosures, status indicators, and actions to clearly manage third-party data sharing.
@@ -485,7 +507,7 @@
                             <span class="cta__button-label">Solution prototype</span>
                             <span class="cta__button-icon">
                                 <img
-                                src="../..assets/icons/icon-chevron-up-right_pink.svg"
+                                src="../../assets/icons/icon-chevron-up-right_pink.svg"
                                 alt="Chevron up right"
                                 aria-hidden="true"
                                 />
@@ -496,7 +518,7 @@
                             <span class="cta__button-label">Deeper dive video</span>
                             <span class="cta__button-icon">
                                 <img
-                                src="../..assets/icons/icon-chevron-up-right_pink.svg"
+                                src="../../assets/icons/icon-chevron-up-right_pink.svg"
                                 alt="Chevron up right"
                                 aria-hidden="true"
                                 />
@@ -514,9 +536,7 @@
                             <h2>Reflection</h2>
                         </header>
                         <div class="intro-layout">
-                            <div class="intro-thumb">
-                                <img src="../../assets/work/allin/feature/social-wireframes_4.png" alt="wireframe exerpt from new social media feature">
-                            </div>
+                            
                             <p>
                                 This project reflects how I often worked at Florida Blue. As the lead designer on this initiative, I partnered closely with UX, product, compliance, content, and engineering to translate complex requirements into clear, scalable product interfaces. On this effort, I used hierarchy, spacing, status indicators, and structured content to design a system that made sensitive data-sharing information easy to understand while aligning with business goals and compliance requirements.
                             </p>
@@ -593,11 +613,7 @@
         </div>
     </div>
 
-    <!-- Data rendering logic --
-    <script type="module" src="./scripts/data.js"></script>
-    !-- Preload overlay UI -->
-    <script type="module" src="../../scripts/modal.js"></script>
-    <script src="../../scripts/lightbox.js"></script>
+    <script src="../../js/lightbox.js"></script>
 
 
     <!-- Load navigation logic --
@@ -633,5 +649,6 @@
                 map.forEach(item => observer.observe(item.target));
             }
     </script>
+    <script type="module" src="../../js/base.js"></script>
 </body>
 </html>
