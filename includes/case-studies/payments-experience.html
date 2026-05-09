@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
     <link rel="stylesheet" href="../../../shared/css/global-tokens.css" /> <!-- Final commit for global shared token day!!! Woo hoo! AW 5/7/2026 (DO NOT DELETE :)-->
     <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../shared/css/global-components.css" />
     <!-- Layer 3 Case Studies -->
     <link rel="stylesheet" href="../../css/case-study-layout.css" />
     <link rel="stylesheet" href="../../css/components.css" />
@@ -21,14 +22,34 @@
     
     
     <div class="bottom-nav__right">
-        <a href="#top">Back to top</a>
+        <a
+            href="#top"
+            class="control control--fixed is-bottom-right">
+
+            <span
+            class="icon rotate-0"
+            data-icon="arrow"
+            aria-hidden="true">
+            </span>
+
+            <span class="sr-only">
+            Back to top
+            </span>
+        </a>
     </div>
     
     <header class="global-header sub-nav">
         <div class="header-inner container">
             <div class="back-link">
                 
-                <a class="back" href="../../"><img class="icon--back" src="../../assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a>
+                <a class="back" href="../../">
+                    <span
+                        class="icon rotate-360"
+                        data-icon="chevron"
+                        aria-hidden="true">
+                    </span>
+                    <span>Back</span><span> to portfolio</span>
+                </a>
                 
             </div>
             <nav class="global-nav" aria-label="Primary">
@@ -343,5 +364,6 @@
             map.forEach(item => observer.observe(item.target));
         }
     </script>
+    <script type="module" src="../../js/base.js"></script>
 </body>
 </html>

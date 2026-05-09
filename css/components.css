@@ -567,10 +567,6 @@ a.back:hover .icon--back {
   width: 48px;
   height: 48px;
 
-  background-color: rgba(35, 205, 205, 0.3);
-  color: #000;
-
-  border-radius: 12px;
   text-decoration: none;
 
   /* hide text visually but keep it accessible */
@@ -589,16 +585,10 @@ a.back:hover .icon--back {
 
 /* inject SVG icon */
 .bottom-nav__right a::before {
-  content: "";
-  width: 20px;
-  height: 20px;
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
-  /* inline SVG using currentColor */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5V19'/%3E%3Cpath d='M6 11L12 5L18 11'/%3E%3C/svg%3E");
 }
 
 /* =========================

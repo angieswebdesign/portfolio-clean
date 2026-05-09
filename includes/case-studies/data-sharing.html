@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
     <link rel="stylesheet" href="../../../shared/css/global-tokens.css" />
     <link rel="stylesheet" href="../../css/tokens.css" />
+    <link rel="stylesheet" href="../../../shared/css/global-components.css" />
     <!-- Layer 3 Case Studies -->
     <link rel="stylesheet" href="../../css/case-study-layout.css" />
     <link rel="stylesheet" href="../../css/components.css" />
@@ -21,15 +22,37 @@
 
 
     <div class="bottom-nav__right">
-        <a href="#top">Back to top</a>
+        <a
+            href="#top"
+            class="control control--fixed is-bottom-right">
+
+            <span
+            class="icon rotate-0"
+            data-icon="arrow"
+            aria-hidden="true">
+            </span>
+
+            <span class="sr-only">
+            Back to top
+            </span>
+        </a>
     </div>
+
+
     
     <header class="global-header sub-nav">
       <div class="header-inner container">
         <div class="back-link">
             
-                <!--<a class="back" href="../../"><img class="icon--back" src="../../assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a>-->
-            <a class="back" href="../../"><span data-icon="chevron" data-icon-size="16" aria-hidden="hidden"></span> <span>Back</span><span> to portfolio</span></a>
+                <!--<a class="back" href="../../"><img class="icon--back" src="../../assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a> <span data-icon="chevron" data-icon-size="16" aria-hidden="hidden"></span> -->
+            <a class="back" href="../../">
+                <span
+                    class="icon rotate-360"
+                    data-icon="chevron"
+                    aria-hidden="true">
+                </span>
+                <span>Back</span><span> to portfolio</span>
+            </a>
         </div>
         <nav class="global-nav" aria-label="Primary">
           <ul class="global-nav__list" id="navList">
@@ -505,23 +528,19 @@
                         
                         <a class="cta__button" href="https://www.figma.com/proto/3mVROayQqbFJwz27yX3AaM/FB?node-id=109-148&t=gswB4XyS39M4aRef-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=109%3A148&show-proto-sidebar=1" target="_blank">
                             <span class="cta__button-label">Solution prototype</span>
-                            <span class="cta__button-icon">
-                                <img
-                                src="../../assets/icons/icon-chevron-up-right_pink.svg"
-                                alt="Chevron up right"
-                                aria-hidden="true"
-                                />
+                            <span
+                                class="icon rotate-45"
+                                data-icon="arrow"
+                                aria-hidden="true">
                             </span>
                         </a>
 
                         <a class="cta__button" href="https://youtu.be/wD66pRfIGA8" target="_blank">
                             <span class="cta__button-label">Deeper dive video</span>
-                            <span class="cta__button-icon">
-                                <img
-                                src="../../assets/icons/icon-chevron-up-right_pink.svg"
-                                alt="Chevron up right"
-                                aria-hidden="true"
-                                />
+                            <span
+                                class="icon rotate-45"
+                                data-icon="arrow"
+                                aria-hidden="true">
                             </span>
                         </a>
                     </div>
