@@ -4,6 +4,7 @@
 
 .feature-layout h3 {
   border: 0;
+  padding: var(--space-md);
 }
 
 /*
@@ -17,10 +18,9 @@
 ========================= */
 
 /* ---------- Hero Blockquote ---------- */
-.pattern-callout--hero {
+.feature-layout .pattern-callout--hero {
   position: relative;
   padding-left: 20px;
-  margin: 32px auto;
   font-size: 1.25rem;
   line-height: 1.5;
   font-style: italic;
@@ -41,6 +41,21 @@
   max-width: 720px;
   justify-content: start;
   border: 0;
+}
+
+/* --- Video ---- */
+
+.feature-layout .section--video, .feature-layout .video__intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 30px 0 0;
+  justify-self: center;
+}
+
+.feature-layout .process-video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 /* --- Intro Grid (DESKTOP) --- */
@@ -77,6 +92,7 @@
   flex-direction: row;
   padding: var(--space-md);
   gap: var(--space-md);
+  align-items: center;
 }
 
 .feature-layout .section-heading {

@@ -513,24 +513,12 @@ a.resume:hover {
   align-items: center;
 }
 
+.sub-nav .back-link svg {
+  width: 16px;
+}
+
 .nav-step {
   margin-right: 3px;
-}
-
-.icon--back {
-  width: 24px;
-  height: 24px;
-  flex-shrink: 0;
-
-  background-image: url("../assets/icons/icon-chevron-left_inactive.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* icon swap */
-a.back:hover .icon--back {
-  background-image: url("../assets/icons/icon-chevron-left_inactive.svg");
 }
 
 /**** CTA variant ****/
@@ -591,102 +579,7 @@ a.back:hover .icon--back {
   background-size: contain;
 }
 
-/* =========================
-   CONTROL BUTTON (GLOBAL)
-========================= */
 
-.control {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 48px;
-  height: 48px;
-
-  background-color: rgba(35, 205, 205, 0.3);
-  color: #000;
-
-  border: 0;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 0;
-
-  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
-
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.control:hover {
-  opacity: 0.85;
-  transform: translateY(-2px);
-}
-
-/* Floating position (optional reuse) */
-.control--floating {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  z-index: 10;
-}
-
-/* === ICON: ARROW === */
-
-.control--arrow::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M12 5V19'/%3E%3Cpath d='M6 11L12 5L18 11'/%3E%3C/svg%3E");
-
-  transition: transform 0.2s ease;
-}
-
-/* === DIRECTION VARIANTS === */
-
-/* default = up */
-.control.is-right::before {
-  transform: rotate(90deg);
-}
-
-.control.is-down::before {
-  transform: rotate(180deg);
-}
-
-.control.is-left::before {
-  transform: rotate(-90deg);
-}
-
-/* === CONTROL LAYOUT: FIXED === */
-
-.control--fixed {
-  position: fixed;
-  z-index: 10;
-}
-
-/* Placement variants */
-.control.is-bottom-right {
-  bottom: 10px;
-  right: 10px;
-}
-
-.control.is-bottom-left {
-  bottom: 10px;
-  left: 10px;
-}
-
-.control.is-top-right {
-  top: 10px;
-  right: 10px;
-}
-
-.control.is-top-left {
-  top: 10px;
-  left: 10px;
-}
 
  /* =========================
    HEADING PATTERN
