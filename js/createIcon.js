@@ -1,4 +1,4 @@
-import { icons } from '../../../shared/js/icons.js'
+import { icons } from 'https://cdn.angelawallace.net/js/icons.js'
 
 const svgNS = 'http://www.w3.org/2000/svg'
 

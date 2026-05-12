@@ -18,7 +18,7 @@
         <meta property="og:url" content="https://www.angelawallace.net/index.html"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Angela Wallace Design // About</title>
+    <title>Angela Wallace Design // Method</title>
     <!-- "Inter" Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,9 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
-    <link rel="stylesheet" href="../shared/css/global-tokens.css" />
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-tokens.css" />
     <link rel="stylesheet" href="css/tokens.css" />
-    <!-- Layer 3 Case Studies -->
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-components.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/feature-layout.css" />
 </head>
@@ -41,7 +41,14 @@
     <header class="global-header sub-nav">
         <div class="header-inner container">
             <div class="back-link">
-                    <a class="back js-page-transition" href="index.html"><img class="icon--back" src="assets/icons/icon-chevron-left_inactive.svg" alt="back icon" /> <span>Back</span><span> to portfolio</span></a>
+                <a class="back" href="/">
+                    <span
+                        class="icon rotate-360"
+                        data-icon="chevron"
+                        aria-hidden="true">
+                    </span>
+                    <span>Back</span>
+                </a>
             </div>
         </div>
     </header>
@@ -49,103 +56,84 @@
     <main>
 
         <!-- Intro -->
-            <section class="section section--intro">
-                <div class="intro__one">
-                        <header>
-                            <h1 class="section-heading large">
-                                <span class="heading-main">Methodology</span>
-                            </h1>
-                        </header>
-                        <div>
-                            <blockquote class="pattern-callout--hero">
-                                <span class="summary">I partner with cross-functional teams to align interface decisions</span><span></span> and deliver complex UI systems with real implementation and outcomes.
-</span>
-                            </blockquote>
-                        </div>
-                </div>
-                    
-                <div class="intro__two profile profile--hero">
+        <section class="section section--video">
+            <div class="video__intro">
+                <header>
+                    <h1 class="section-heading large">
+                        <span class="heading-main">Method</span>
+                    </h1>
+                </header>
+                <div>
+                    <blockquote class="section-callout--hero">
                         
-                        <div class="profile__bg">
-                            
-                            <svg class="arch-bg" viewBox="0 0 400 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-                                <defs>
-                                    
-                                    <linearGradient id="profile-archGradient" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="var(--color-accent-yellow)" />
-                                        <stop offset="45%" stop-color="var(--color-accent-pink)" />
-                                        <stop offset="100%" stop-color="var(--color-accent-pink)" stop-opacity="0" />
-                                    </linearGradient>
-                                    
-                                    <pattern id="profile-dots" width="16" height="16" patternUnits="userSpaceOnUse">
-                                        <circle cx="3" cy="3" r="2" fill="var(--color-surface-muted)" />
-                                    </pattern>
-                                    
-                                    <linearGradient id="profile-dotFadeGrad" x1="0" y1="1" x2="1" y2="0">
-                                        <stop offset="60%" stop-color="black" />
-                                        <stop offset="100%" stop-color="white" />
-                                    </linearGradient>
-                                    
-                                    <mask id="profile-dotFade">
-                                        <rect x="120" y="0" width="230" height="230" fill="url(#profile-dotFadeGrad)" />
-                                    </mask>
-                                    
-                                    <clipPath id="profile-dotClip">
-                                        <rect x="120" y="0" width="230" height="230" rx="90" />
-                                    </clipPath>
-                                    
-                                </defs>
-                                
-                                <path
-                                d="M0,600 L0,190 A150,150 0 0 1 300,190 L300,600 Z"
-                                fill="url(#profile-archGradient)"
-                                />
-                                
-                                <g clip-path="url(#profile-dotClip)" mask="url(#profile-dotFade)">
-                                    <rect x="120" y="0" width="230" height="230" fill="url(#profile-dots)" />
-                                </g>
-                                
-                            </svg>
-                            
-                        </div>
-                        <img src="assets/angela-profile_490h_2x.webp" alt="Angela Wallace profile image" />
-                </div>
+                        <span class="summary"> I work at the intersection of design systems and front-end implementation, solving for scalability, governance, and production alignment. </span><span>I’m particularly interested in how AI can accelerate workflows while preserving implementation quality and consistency.</span>
                     
-                <div class="intro__three intro__content">
-                        <h2 class="section-heading medium">
-                            <span class="heading-main">I Bridge</span>
-                            <span class="heading-accent">the gap</span>
-                        </h2>
-                        <ul class="pattern-list">
-                            <li>
-                                <b>I design and deliver visual systems end-to-end</b>, from user flows to design libraries to state-driven front-end UI powered by API data.
-                            </li>
-                            <li>
-                                Using AI to accelerate design and development with judgment aligned to systems, business intent, and state logic.
-                            </li>
-                            <li>
-                                Reducing rework by aligning system constraints, reuse, and engineering feasibility early in the design process.
-                            </li>
-                            <li>
-                                Lastly, shipping UI with clarity, consistency, and speed across iterations.
-                            </li>
+                </blockquote>
+            </div>
+        </div>
+                    
+                <div class="video__wrapper">
                         
+                    <video
+                        class="process-video"
+                        autoplay
+                        width="900"
+                        muted
+                        loop
+                        playsinline
+                        controls
+                        preload="metadata"
+                        playbackRate="0.5"
+                        aria-hidden="true"
+                        aria-label="Angela Wallace Design: Methodology process videos">
+                        
+                        <source
+                            src="assets/video/token-variable-example.mp4"
+                            type="video/mp4" />
+
+                        </video>
+
+                </div>
+            
+            </section>
+
+            <section class="section justified">
+
+                <p class="paragraph__justified">
+                    <span>Team Alignment.</span> I partner closely with interaction designers, product teams, and engineers to refine flows, validate edge cases, and account for things like authentication states, segmentation, permissions, asynchronous behavior, and responsive behavior across design systems, platforms and products.
+                </p>
+
+                <ul class="list list--check">
+                            <!--<h3 class="list__title">How I help teams align:</h3>-->
+                        <li>
+                            Align implementation expectations early
+                        </li>
+                        <li>
+                            Identify reusable patterns
+                        </li>
+                        <li>
+                            Communicate design intent practical for implementation
+                        </li>
+                        <li>
+                            Help reduce design-to-dev drift across products
+                        </li>
+                        <li>
+                            Validate edge cases, state behavior, and deployment realities before shipping
+                        </li>
                         </ul>
-                        <div class="pattern-callout">
-                            
-                            <div class="pattern-callout__content">
-                                <i>I keep the end user in focus, supporting system alignment and workflow clarity where it directly impacts UI quality and implementation.</i>
-                            </div>
-                        </div>
-                </div>
+
             </section>
 
             <section class="stacked slide-show--banner ">
                 
-                <h3 class="section-heading small">
-                    <span class="heading-main">Design</span>
-                    <span class="heading-accent">methods</span>
-                </h3>
+                <div>
+                    <h3 class="section-heading small">
+                        <span class="heading-main">Design</span>
+                        <span class="heading-accent">methods</span>
+                    </h3>
+
+
+                </div>
 
                 
                 <div class="slide-show">
@@ -178,12 +166,22 @@
                         <img src="assets/work/process/privacy-data_chart.png" alt="Chart that displays JSON data" />
                         
                     </div>
-                    
+
                     <div class="slide-show__controls">
                         <button class="control control--arrow slide-show__control is-left" data-prev>
+                            <span
+                                class="icon rotate-270"
+                                data-icon="arrow"
+                                aria-hidden="true">
+                            </span>
                         </button>
                         
                         <button class="control control--arrow slide-show__control is-right" data-next>
+                            <span
+                                class="icon rotate-90"
+                                data-icon="arrow"
+                                aria-hidden="true">
+                            </span>
                         </button>
                     </div>
                     
@@ -250,35 +248,20 @@
 
             </section>
 
-            <section>
-                
-                <div class="cta-banner">
-                    Let’s create something meaningful together.
-                    <a class="cta__button" href="mailto:hello@angelawallace.net">
-                        <span class="cta__button-content">
-                            <span class="cta__button-label">Email me</span>
-                            <span class="cta__button-icon">
-                                <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.9964 0.75H2.7808C1.65922 0.75 0.75 1.52066 0.75 2.47131V12.7992C0.75 13.7498 1.65922 14.5205 2.7808 14.5205H16.9964C18.118 14.5205 19.0272 13.7498 19.0272 12.7992V2.47131C19.0272 1.52066 18.118 0.75 16.9964 0.75Z" stroke-linecap="round"/>
-                                    <path d="M1.55145 2.76044L9.91981 9.26044L18.2882 2.76044" stroke-linecap="round"/>
-                                </svg>
-                            </span>
-                        </span>
-                    </a>
-                </div>
+            
+            
 
-            </section>
-
-            <footer>
+    </main>
+    <footer>
                 <p class="copyright">
-                &copy; 2026 Angela Wallace Design
+                &copy; 2026 <a href="mailto:hello@angelawallace.net">Angela Wallace Design</a>
                 </p>
             </footer>
 
-    </main>
-
-    <script src="./js/lightbox.js"></script>
-    <script type="module" src="./js/slideshow.js"></script>
+    <script type="module">
+        import { initSlideShow } from './js/slideshow.js';
+        document.querySelectorAll('.slide-show').forEach(initSlideShow);
+    </script>
 
 
     <script>
@@ -314,11 +297,7 @@
 
             
     </script>
-    <script type="module">
-        import { initSlideShow } from './js/slideshow.js';
-        document.querySelectorAll('.slide-show').forEach(initSlideShow);
-
-    </script>
+    
 
     <script type="module">
         import { initPageTransitions, initPageLoad } from './js/interactions.js';
@@ -326,6 +305,8 @@
         initPageLoad();
         initPageTransitions();
     </script>
+
+    <script type="module" src="./js/base.js"></script>
 
     <!--<script type="module" src="/./js/main.js"></script> enable when moving all inline and external js to one file-->
 </body>

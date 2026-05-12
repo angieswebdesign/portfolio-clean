@@ -26,9 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
-    <link rel="stylesheet" href="../shared/css/global-tokens.css" />
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-tokens.css" />
     <link rel="stylesheet" href="css/tokens.css" />
-    <link rel="stylesheet" href="../shared/css/global-components.css" />
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-components.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/feature-layout.css" />
 </head>
@@ -56,20 +56,21 @@
     <main>
 
         <!-- Intro -->
-            <section class="section section--video">
-                <div class="video__intro">
-                        <header>
-                            <h1 class="section-heading large">
-                                <span class="heading-main">Method</span>
-                            </h1>
-                        </header>
-                        <div>
-                            <blockquote class="pattern-callout--hero">
-                                <span class="summary">I partner with cross-functional teams to align interface decisions</span><span></span> and deliver complex UI systems with real implementation and outcomes.
-</span>
-                            </blockquote>
-                        </div>
-                </div>
+        <section class="section section--video">
+            <div class="video__intro">
+                <header>
+                    <h1 class="section-heading large">
+                        <span class="heading-main">Method</span>
+                    </h1>
+                </header>
+                <div>
+                    <blockquote class="section-callout--hero">
+                        
+                        <span class="summary">I enjoy solving the layer where design intent and engineering feasibility need to align at scale. </span><span>I’m especially interested in how AI can responsibly accelerate workflows without sacrificing consistency, governance, or implementation quality.</span>
+                    </span>
+                </blockquote>
+            </div>
+        </div>
                     
                 <div class="video__wrapper">
                         
@@ -94,6 +95,33 @@
 
                 </div>
             
+            </section>
+
+            <section class="section justified">
+
+                <p class="paragraph__justified">
+                    <span>Team Alignment.</span> I partner closely with interaction designers, product teams, and engineers to refine flows, validate edge cases, and account for things like authentication states, segmentation, permissions, asynchronous behavior, and responsive behavior across platforms and products.
+                </p>
+
+                <ul class="list list--check">
+                            <!--<h3 class="list__title">How I help teams align:</h3>-->
+                        <li>
+                            Align implementation expectations early
+                        </li>
+                        <li>
+                            Identify reusable patterns
+                        </li>
+                        <li>
+                            Communicate design intent practical for implementation
+                        </li>
+                        <li>
+                            Help reduce design-to-dev drift across products
+                        </li>
+                        <li>
+                            Validate edge cases, state behavior, and deployment realities before shipping
+                        </li>
+                        </ul>
+
             </section>
 
             <section class="stacked slide-show--banner ">
@@ -138,7 +166,7 @@
                         <img src="assets/work/process/privacy-data_chart.png" alt="Chart that displays JSON data" />
                         
                     </div>
-                    
+
                     <div class="slide-show__controls">
                         <button class="control control--arrow slide-show__control is-left" data-prev>
                             <span
@@ -220,35 +248,20 @@
 
             </section>
 
-            <section>
-                
-                <div class="cta-banner">
-                    Let’s create something meaningful together.
-                    <a class="cta__button" href="mailto:hello@angelawallace.net">
-                        <span class="cta__button-content">
-                            <span class="cta__button-label">Email me</span>
-                            <span class="cta__button-icon">
-                                <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.9964 0.75H2.7808C1.65922 0.75 0.75 1.52066 0.75 2.47131V12.7992C0.75 13.7498 1.65922 14.5205 2.7808 14.5205H16.9964C18.118 14.5205 19.0272 13.7498 19.0272 12.7992V2.47131C19.0272 1.52066 18.118 0.75 16.9964 0.75Z" stroke-linecap="round"/>
-                                    <path d="M1.55145 2.76044L9.91981 9.26044L18.2882 2.76044" stroke-linecap="round"/>
-                                </svg>
-                            </span>
-                        </span>
-                    </a>
-                </div>
+            
+            
 
-            </section>
-
-            <footer>
+    </main>
+    <footer>
                 <p class="copyright">
-                &copy; 2026 Angela Wallace Design
+                &copy; 2026 <a href="mailto:hello@angelawallace.net">Angela Wallace Design</a>
                 </p>
             </footer>
 
-    </main>
-
-    <script src="./js/lightbox.js"></script>
-    <script type="module" src="./js/slideshow.js"></script>
+    <script type="module">
+        import { initSlideShow } from './js/slideshow.js';
+        document.querySelectorAll('.slide-show').forEach(initSlideShow);
+    </script>
 
 
     <script>
@@ -284,11 +297,7 @@
 
             
     </script>
-    <script type="module">
-        import { initSlideShow } from './js/slideshow.js';
-        document.querySelectorAll('.slide-show').forEach(initSlideShow);
-
-    </script>
+    
 
     <script type="module">
         import { initPageTransitions, initPageLoad } from './js/interactions.js';
@@ -297,7 +306,6 @@
         initPageTransitions();
     </script>
 
-    <script src="./js/lightbox.js"></script>
     <script type="module" src="./js/base.js"></script>
 
     <!--<script type="module" src="/./js/main.js"></script> enable when moving all inline and external js to one file-->

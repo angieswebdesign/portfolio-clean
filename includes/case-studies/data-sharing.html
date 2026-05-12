@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
-    <link rel="stylesheet" href="../../../shared/css/global-tokens.css" />
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-tokens.css" />
     <link rel="stylesheet" href="../../css/tokens.css" />
-    <link rel="stylesheet" href="../../../shared/css/global-components.css" />
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-components.css" />
     <link rel="stylesheet" href="../../css/case-study-layout.css" />
     <link rel="stylesheet" href="../../css/components.css" />
 </head>
@@ -50,7 +50,7 @@
                     data-icon="chevron"
                     aria-hidden="true">
                 </span>
-                <span>Back</span><span> to portfolio</span>
+                <span>Back</span>
             </a>
         </div>
         <nav class="global-nav" aria-label="Primary">
@@ -439,7 +439,8 @@
                                     </a>
                                     <figcaption class="slide-caption">
                                         <span>Fig. 1</span>
-                                        <b>Initial Concept.</b> <!--Early interface exploration of designing a single page for managing provider data-sharing settings, with session-initiated legal copy accessible via modal. (-->Due to a change in scope, this solution was not possible to execute.
+                                        <b>Initial Concept.</b>
+                                        Due to a change in scope, this solution was not possible to execute.
                                     </figcaption>
                                 </figure>
                            
@@ -667,6 +668,12 @@
                 map.forEach(item => observer.observe(item.target));
             }
     </script>
+    <script type="module">
+  import { initPageTransitions, initPageLoad } from '../../js/interactions.js';
+
+  initPageLoad();
+  initPageTransitions();
+</script>
     <script type="module" src="../../js/base.js"></script>
 </body>
 </html>

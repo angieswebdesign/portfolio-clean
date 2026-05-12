@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
-    <link rel="stylesheet" href="../../../shared/css/global-tokens.css" /> <!-- Final commit for global shared token day!!! Woo hoo! AW 5/7/2026 (DO NOT DELETE :)-->
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-tokens.css" /> <!-- Final commit for global shared token day!!! Woo hoo! AW 5/7/2026 (DO NOT DELETE :)-->
     <link rel="stylesheet" href="../../css/tokens.css" />
-    <link rel="stylesheet" href="../../../shared/css/global-components.css" />
+    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-components.css" />
     <!-- Layer 3 Case Studies -->
     <link rel="stylesheet" href="../../css/case-study-layout.css" />
     <link rel="stylesheet" href="../../css/components.css" />
@@ -48,7 +48,7 @@
                         data-icon="chevron"
                         aria-hidden="true">
                     </span>
-                    <span>Back</span><span> to portfolio</span>
+                    <span>Back</span>
                 </a>
                 
             </div>
@@ -364,6 +364,12 @@
             map.forEach(item => observer.observe(item.target));
         }
     </script>
+    <script type="module">
+  import { initPageTransitions, initPageLoad } from '../../js/interactions.js';
+
+  initPageLoad();
+  initPageTransitions();
+</script>
     <script type="module" src="../../js/base.js"></script>
 </body>
 </html>

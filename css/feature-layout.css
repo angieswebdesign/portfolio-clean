@@ -2,6 +2,12 @@
    Do not override .section-heading in layout files 
 */
 
+.feature-layout main {
+  display: grid;
+  gap: var(--gap-3);
+  padding: var(--gap-4) 0 0;
+}
+
 .feature-layout h3 {
   border: 0;
   padding: var(--space-md);
@@ -13,31 +19,9 @@
 }
   */
 
-/* =========================
-   GLOBAL STYLES
-========================= */
 
-/* ---------- Hero Blockquote ---------- */
-.feature-layout .pattern-callout--hero {
-  position: relative;
-  padding-left: 20px;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-style: italic;
-}
 
-.pattern-callout--hero::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.2em;
-  bottom: 0.2em;
-  width: 8px;
-  background: var(--color-accent);
-  border-radius: 2px;
-}
-
-.feature-layout-layout .section-heading {
+.feature-layout .section-heading {
   max-width: 720px;
   justify-content: start;
   border: 0;
@@ -45,17 +29,22 @@
 
 /* --- Video ---- */
 
-.feature-layout .section--video, .feature-layout .video__intro {
+.feature-layout .section--video {
   display: grid;
   grid-template-columns: 1fr;
   max-width: 900px;
-  margin: 30px 0 0;
   justify-self: center;
+  gap: var(--gap-2);
 }
 
 .feature-layout .process-video {
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+.feature-layout .video__wrapper {
+  border-radius: 32px;
+  overflow: clip;
 }
 
 /* --- Intro Grid (DESKTOP) --- */
@@ -90,7 +79,6 @@
 .feature-layout .stacked {
   display: flex;
   flex-direction: row;
-  padding: var(--space-md);
   gap: var(--space-md);
   align-items: center;
 }
@@ -113,7 +101,6 @@
 .feature-layout .cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0;
-  padding: var(--gap-3) 0;
 }
 
 .feature-layout .card {
@@ -136,6 +123,30 @@
   height: 66px;
 }
 
+.feature-layout .section.justified {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  gap: var(--gap-3);
+  margin: 0 auto;
+}
+
+  /* =========================
+   FOOTER
+  ========================= */  
+
+  .feature-layout .copyright {
+    margin: 0;
+    padding: var(--gap-3) 0;
+    color: #E5E5E5;
+    background-color: #393A3E;
+  }
+
+  .feature-layout footer {
+    text-align: center;
+    padding: 0;
+  }
+
 /* =========================
    MOBILE OVERRIDES
 ========================= */
@@ -143,7 +154,7 @@
 @media (max-width: 480px) {
 
   .feature-layout main {
-  padding: 0;
+  padding: var(--gap-2);
 }
 
  .feature-layout .section-heading.large {
@@ -162,6 +173,7 @@
   --heading-main-size: var(--type-h2);
   --heading-accent-size: calc(var(--type-h2) * 0.9);
   --heading-accent-offset: -4px;
+  padding: 0;
 }
 
   /* --- Intro Grid (MOBILE) --- */
@@ -188,6 +200,12 @@
     min-width: 0;
   }
 
+  /* --- Intro Video --- */
+  .feature-layout .video__wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
   /* --- Profile visual --- */
 .feature-layout .profile--hero {
   height: auto;
@@ -201,7 +219,7 @@
   /* --- Section Layout (MOBILE = column) --- */
   .feature-layout .stacked {
     flex-direction: column;
-    margin: var(--space-md);
+    margin: 10px;
   }
 
   .feature-layout .section-heading .heading-main {
@@ -228,17 +246,5 @@
 
   .pattern-callout--hero span:last-child {
     display: none;
-  }
-
-  .feature-layout footer {
-    text-align: center;
-    padding: 0;
-  }
-
-  .feature-layout .copyright {
-    margin: 0;
-    padding: var(--gap-3) 0;
-    color: #E5E5E5;
-    background-color: #393A3E;
   }
 }

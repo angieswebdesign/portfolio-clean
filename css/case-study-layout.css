@@ -616,6 +616,7 @@ body.is-layer-3-open {
 }
 
 @media (max-width: 480px) {
+
   article.layer-3 {
     gap:10px;
   }
@@ -628,14 +629,18 @@ body.is-layer-3-open {
     flex-direction: column;
   }
 
-
-  
+  layer-3 .pattern-intro.thumb .intro-thumb {
+    margin-top: 8px;
+  }
 
  .layer-3 section {
   padding: 0;
   }
  .layer-3 section:not(:first-of-type) {
     padding: 0;
+  }
+  .layer-3 section p {
+    margin: 0;
   }
  .layer-3 header img {
   aspect-ratio: 4 / 3;
@@ -653,8 +658,14 @@ body.is-layer-3-open {
   display: flex;
   flex-direction: column;
  }
- .layer-3 .overview-content h2 {
-  text-align: center;
+ .layer-3 .component-summary h3 {
+  text-align: left;
+ }
+ .layer-3 .component-summary dl {
+    grid-template-rows: auto 1fr;
+ }
+  .layer-3 .component-summary dd {
+    margin-bottom: 1rem;
  }
  .layer-3 .pattern-intro .intro-thumb {
     display: none;
@@ -670,13 +681,17 @@ body.is-layer-3-open {
   width: 100%;
  }
 
-    .layer-3 .case-section {
+  .layer-3 .case-section {
   height: auto;
   min-height: auto;
+  gap: 0;
 }
 .layer-3 main.case-body {
   max-width: 100%;
   padding-inline: 16px;
+}
+.layer-3 main.case-body > section.case-section {
+  padding-top: 0;
 }
 .layer-3 {
     padding: 0; /* remove outer padding */
