@@ -2,12 +2,11 @@
    CHART CONTAINER
 ========================= */
 #chart {
-  display: flex;
-  justify-content: center;
-  background: white;
+  display: block;
+  background: transparent;
   /*padding: 40px;*/
-  border-left: 11px solid #000;
-  border-bottom: 11px solid #000;
+  border-left: 0;
+  border-bottom: 0;
   border-right: 0;
   border-top: 0;
 }

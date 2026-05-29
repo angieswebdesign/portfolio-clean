@@ -32,5 +32,21 @@ function handleTransitionClick(e) {
 }
 
 export function initPageLoad() {
-  document.body.classList.add('fade-in');
+  let loaded = false;
+
+  const markLoaded = () => {
+    if (loaded) return;
+    loaded = true;
+
+    requestAnimationFrame(() => {
+      document.body.classList.add('is-loaded');
+      document.body.classList.add('fade-in');
+    });
+  };
+
+  if (document.readyState === 'complete') {
+    markLoaded();
+  } else {
+    window.addEventListener('load', markLoaded, { once: true });
+  }
 }

@@ -4,12 +4,20 @@
 
 import { renderOverlayPanel } from "./components.js";
 
-import { positionOverlayPanel } from "./chart.js";
-let overlayTriangle = null;
+import { positionPanelNearAnchor } from "../modules/shared/visualization-utils.js";
+import {
+  calculateTriangleConnector,
+  renderTriangleConnector
+} from "../modules/shared/svg-utils.js";
 
-export function openModal(data) {
-  window.__activeCircle = data.__circle__;
-  const modalRoot = document.getElementById("modal-root");
+let overlayTriangle = null;
+let activeAnchor = null;
+
+export function openModal(data, config = {}) {
+  activeAnchor = config.anchorElement;
+  const modalRoot = resolveElement(config.modalRoot ?? "#modal-root");
+
+  if (!modalRoot || !activeAnchor) return null;
   
   modalRoot.innerHTML = `
   <div id="modal-overlay">
@@ -63,9 +71,11 @@ export function openModal(data) {
 
   
 requestAnimationFrame(() => {
-  positionOverlayPanel(data.__circle__);
-
-  const panelEl = document.querySelector(".overlay__panel");
+  positionPanelNearAnchor(activeAnchor, {
+    overlay,
+    panel: panelEl,
+    insets: config.insets
+  });
 
   const waitForLayout = () => {
     const rect1 = panelEl.getBoundingClientRect();
@@ -123,69 +133,17 @@ function buildTriangle(panelRect) {
 
   const overlayRect = overlayRoot.getBoundingClientRect();
 
-  const node = window.__activeCircle?.getBoundingClientRect();
+  const node = activeAnchor?.getBoundingClientRect();
 
   if (!node) return;
 
-  const panelHeight = panelEl.getBoundingClientRect().height;
-  const MIN_WEDGE = 4;
+  const connector = calculateTriangleConnector({
+    nodeRect: node,
+    panelRect,
+    overlayRect
+  });
 
-  const nodeCenterX = node.left + node.width / 2;
-  const nodeCenterY = node.top + node.height / 2;
-
-  const Ay = nodeCenterY - panelRect.top;
-  const Ayclamped = Math.max(0, Math.min(panelHeight, Ay));
-
-  overlayTriangle.style.top =
-  `${Math.floor(panelRect.top - overlayRect.top)}px`;
-
-  const panelIsRightOfNode = panelRect.left > node.left;
-
-  if (panelIsRightOfNode) {
-    const wedgeWidth = panelRect.left - nodeCenterX;
-
-    if (wedgeWidth > MIN_WEDGE) {
-      overlayTriangle.style.width = `${wedgeWidth}px`;
-      overlayTriangle.style.height = `${panelHeight + 1}px`;
-
-      overlayTriangle.setAttribute("viewBox", `0 0 ${wedgeWidth} ${panelHeight}`);
-      overlayTriangle.setAttribute("preserveAspectRatio", "none");
-
-      overlayTriangle.style.left =
-        `${panelRect.left - overlayRect.left - wedgeWidth}px`;
-
-      overlayTriangle.innerHTML = `
-        <polygon points="
-          ${wedgeWidth},0
-          ${wedgeWidth},${panelHeight}
-          0,${Ayclamped}
-        " fill="var(--overlay-triangle-bg)" />
-      `;
-
-    }
-  } else {
-    const wedgeWidth = nodeCenterX - panelRect.right;
-
-    if (wedgeWidth > MIN_WEDGE) {
-      overlayTriangle.style.width = `${wedgeWidth}px`;
-      overlayTriangle.style.height = `${panelHeight}px`;
-
-      overlayTriangle.setAttribute("viewBox", `0 0 ${wedgeWidth} ${panelHeight}`);
-      overlayTriangle.setAttribute("preserveAspectRatio", "none");
-
-      overlayTriangle.style.left =
-        `${panelRect.right - overlayRect.left}px`;
-
-      overlayTriangle.innerHTML = `
-        <polygon points="
-          0,0
-          0,${panelHeight}
-          ${wedgeWidth},${Ayclamped}
-        " fill="var(--overlay-triangle-bg)" />
-      `;
-
-    }
-  }
+  renderTriangleConnector(overlayTriangle, connector, "var(--overlay-triangle-bg)");
 
   // reveal panel after triangle
   setTimeout(() => {
@@ -210,6 +168,7 @@ function closeModal() {
   }
 
   modalRoot.innerHTML = "";
+  activeAnchor = null;
 }
 
 // ======================================================
@@ -217,9 +176,12 @@ function closeModal() {
 // ======================================================
 
 
-export function openCaseStudy(project) {
-  const layer3 = document.getElementById("layer-3-overlay");
-  const closeBtn = document.getElementById("layer-3-close");
+export function openCaseStudy(project, config = {}) {
+  const layer3 = resolveElement(config.layerRoot ?? "#layer-3-overlay");
+  const closeBtn = resolveElement(config.closeButton ?? "#layer-3-close");
+  const stageSelector = config.stage ?? ".layer-3-stage";
+  const openClass = config.openClass ?? "is-open";
+  const bodyClass = config.bodyClass ?? "is-layer-3-open";
 
   if (!layer3) {
     console.warn("Layer 3 overlay not found");
@@ -231,9 +193,9 @@ export function openCaseStudy(project) {
     return;
   }
 
-  layer3.classList.add("is-open");
+  layer3.classList.add(openClass);
   layer3.setAttribute("aria-hidden", "false");
-  document.body.classList.add("is-layer-3-open");
+  document.body.classList.add(bodyClass);
 
   console.log("Layer 3 opened for:", project.id);
 
@@ -245,7 +207,7 @@ export function openCaseStudy(project) {
   fetch(project.htmlInclude)
     .then((res) => res.text())
     .then((html) => {
-      const stage = document.querySelector(".layer-3-stage");
+      const stage = resolveElement(stageSelector);
       if (!stage) {
         console.warn("Layer 3 stage not found");
         return;
@@ -257,9 +219,9 @@ export function openCaseStudy(project) {
     });
 
   function closeLayer3() {
-    layer3.classList.remove("is-open");
+    layer3.classList.remove(openClass);
     layer3.setAttribute("aria-hidden", "true");
-    document.body.classList.remove("is-layer-3-open");
+    document.body.classList.remove(bodyClass);
     document.removeEventListener("keydown", onEscape);
   }
 
@@ -276,10 +238,13 @@ export function openCaseStudy(project) {
   document.addEventListener("keydown", onEscape);
 }
 
+function resolveElement(target) {
+  if (typeof target === "string") return document.querySelector(target);
+  return target;
+}
+
 
 
 // ======================================================
 // END LAYER 3 — CASE STUDY OVERLAY
 // ======================================================
-
-

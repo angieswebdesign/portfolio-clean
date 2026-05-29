@@ -53,10 +53,10 @@ body.long-page {
 
 body {
   margin: 0;
-  background: transparent;      /* black frame */
+  background: var(--theme-bg, transparent);
   padding: var(--frame-pad);     /* fixed 20px frame */
   font-family: var(--font-sans);
-  color: var(--text);
+  color: var(--theme-text, var(--color-text));
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
@@ -97,6 +97,23 @@ header { width: 100%; }
   max-width: var(--container-max);
   margin-inline: auto;
   padding: var(--gap-3);
+}
+
+.page-flow,
+.section-flow {
+  min-width: 0;
+}
+
+.section-shell {
+  width: 100%;
+}
+
+.section-slot {
+  min-width: 0;
+}
+
+.section-slot--header {
+  width: 100%;
 }
 
 .section > .container {
@@ -378,4 +395,3 @@ header { width: 100%; }
 
 
   
-

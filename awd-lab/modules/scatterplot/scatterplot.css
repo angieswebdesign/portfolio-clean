@@ -1,0 +1,108 @@
+.sp-scatterplot {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 12px;
+  width: 100%;
+  font-family: var(--viz-font-sans);
+}
+
+.sp-scatterplot__axis-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  min-width: 1.5rem;
+}
+
+.sp-scatterplot__axis-labels span:nth-child(even) {
+  visibility: hidden;
+}
+
+.sp-scatterplot__plot {
+  display: flex;
+  grid-column: 2;
+  grid-row: 1;
+  justify-content: center;
+  min-width: 0;
+  background: var(--viz-color-surface);
+  border-left: 11px solid #000;
+  border-bottom: 11px solid #000;
+  overflow: hidden;
+}
+
+.sp-scatterplot__svg {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+}
+
+.sp-scatterplot__dot {
+  cursor: pointer;
+  transition: opacity 120ms ease;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.sp-scatterplot__dot:hover,
+.sp-scatterplot__dot:focus {
+  opacity: 0.75;
+}
+
+.sp-scatterplot__dot:focus-visible {
+  outline: 2px solid var(--color-focus, #d7154d);
+  outline-offset: 2px;
+}
+
+.sp-scatterplot__x-axis {
+  grid-column: 2;
+  grid-row: 2;
+  text-align: right;
+}
+
+.sp-overlay-root {
+  position: relative;
+}
+
+.sp-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  padding: 0;
+  background: var(--overlay-bg);
+  cursor: pointer;
+}
+
+.sp-overlay[data-open="true"] {
+  display: block;
+}
+
+.sp-overlay__panel {
+  position: absolute;
+  width: 440px;
+  background: var(--viz-color-surface);
+}
+
+.sp-overlay__triangle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  clip-path: inset(0 100% 0 0);
+  transition:
+    opacity var(--overlay-triangle-enter-duration, 240ms) var(--overlay-triangle-enter-ease, ease),
+    clip-path var(--overlay-triangle-enter-duration, 240ms) var(--overlay-triangle-enter-ease, ease);
+}
+
+.sp-overlay__triangle.is-visible {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+}
+
+@media (max-width: 480px) {
+  .sp-scatterplot__svg {
+    max-width: none;
+  }
+}

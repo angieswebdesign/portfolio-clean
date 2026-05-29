@@ -31,7 +31,7 @@
   <!-- Global Tokens -->
         <link rel="stylesheet" href="css/tokens.css" />
   <!-- Conponents -->
-        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/components.css?v=20260528" />
         <!-- Main CSS -->
         <link rel="stylesheet" href="css/main.css" />
   <!-- Scatter Plot CSS -->
@@ -39,6 +39,10 @@
   <!-- Layer 3 Case Studies -->
         <link rel="stylesheet" href="css/case-study.css" />
         <link rel="stylesheet" href="css/surface.css" />
+  <!-- Portable Visualization Modules -->
+        <link rel="stylesheet" href="modules/shared/visualization-tokens.css" />
+        <link rel="stylesheet" href="modules/scatterplot/scatterplot.css" />
+        <link rel="stylesheet" href="modules/surface-node/surface-node.css" />
 </head>
 <body class="ai-lab">
   <div id="frame" class="frame" aria-hidden="true"></div>
@@ -112,7 +116,7 @@
                 </h2>
                 <p>Developed and staged a React application with AI-assisted workflows, including theming, design system alignment, and SVG/CSS-based icon implementation.</p>
                 <div>
-                <a class="primary-btn-small" href="https://angelawallace.net/apply-tracker/" target="_blank">Launch web app <!--<img src="assets/icons/icon-ui_chevron-up-right.svg" alt="opens in new tab" />--></a>
+                <a class="button--primary" href="https://angelawallace.net/apply-tracker/" target="_blank">Launch web app <!--<img src="assets/icons/icon-ui_chevron-up-right.svg" alt="opens in new tab" />--></a>
                 </div>
               </header>
               <div role="list" aria-label="Service cards">
@@ -166,7 +170,7 @@
                         <span>2</span>
                         <span>1</span>
                     </div>
-                    <div id="chart" role="img" aria-labelledby="chart-title chart-desc"></div>
+                    <div id="chart" data-scatterplot role="img" aria-labelledby="chart-title chart-desc"></div>
                     <div class="x-axis-label">Year</div>
                 </div>
                 <!--<div class="plot-bottom">
@@ -203,30 +207,7 @@
             <div class="cards" role="list" aria-label="Service cards">
               
               <!-- VISUALIZATION LAYER w Nodes -->
-              <div class="intro-viz" aria-hidden="true">
-                
-                <!-- SURFACE -->
-                <div class="intro-surface">
-                  <div class="surface-motion" data-surface>
-                    
-                    <div class="surface-content">
-                      <img src="assets/surface/surface_face.svg" class="surface-face" alt="Surface face" />
-                      <img src="assets/surface/surface_edge.svg" class="surface-edge" alt="Surface edge" />
-                    </div>
-                    
-                  </div>
-                </div>
-                
-                <!-- NODES -->
-                <div class="intro-nodes">
-                  <span class="node" data-node></span>
-                  <span class="node" data-node></span>
-                  <span class="node" data-node></span>
-                  <span class="node" data-node></span>
-                  <span class="node" data-node></span>
-                </div>
-                
-              </div>
+              <div class="intro-viz" data-surface-node-map aria-hidden="true"></div>
 
             </div>
           </div>

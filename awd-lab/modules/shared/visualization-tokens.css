@@ -1,0 +1,20 @@
+.sp-scatterplot,
+.sn-surface-node {
+  --viz-font-sans: var(--font-sans, Inter, system-ui, sans-serif);
+  --viz-color-surface: var(--color-surface, #fff);
+  --viz-color-text: var(--color-text, #111);
+  --viz-color-muted: var(--color-secondary, #c3c3c3);
+  --viz-color-accent: var(--color-accent, #fa4d7e);
+  --viz-motion-fast: var(--motion-fast, 160ms);
+  --viz-ease-standard: var(--ease-standard, ease);
+  box-sizing: border-box;
+}
+
+.sp-scatterplot *,
+.sp-scatterplot *::before,
+.sp-scatterplot *::after,
+.sn-surface-node *,
+.sn-surface-node *::before,
+.sn-surface-node *::after {
+  box-sizing: inherit;
+}

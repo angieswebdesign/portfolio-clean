@@ -8,9 +8,10 @@
 body {
   margin: 0;
   padding: 0;
+  background: var(--theme-bg, transparent);
   
   font-family: var(--font-sans);
-  color: var(--color-text);
+  color: var(--theme-text, var(--color-text));
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 400;
@@ -106,16 +107,22 @@ a.resume:hover {
   color: var(--color-accent);
 }
 
+a.utility {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 /* PRIMARY BUTTON */
 .primary-btn {
   appearance: none;
-  background-color: #000;
+  background-color: var(--color-primary);
   border: 0;
   padding: 12px 48px;
   font: inherit;
   text-decoration: none;
   cursor: pointer;
-  color: #fff;
+  color: var(--color-text-contrast);
   font-family: var(--font-serif);
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -123,13 +130,13 @@ a.resume:hover {
 .primary-btn:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 3px;
-  background-color: #fff;
-  color: #000;
+  background-color: var(--theme-surface, #fff);
+  color: var(--theme-text, #000);
 }
 
 .primary-btn:hover {
-  color: #000;
-  background-color: #fff;
+  color: var(--theme-text, #000);
+  background-color: var(--theme-surface, #fff);
   box-shadow: 0 1px 2.4px rgba(0, 0, 0, 0.25);
 }
 
@@ -294,28 +301,6 @@ a.resume:hover {
   gap: 5px;
 }
 
-.global-nav__list {
-  display: flex;
-  list-style: none;
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  justify-content: end;
-}
-
-.global-nav__list li + li::before {
-  content: "/";
-  margin-inline: 15px;
-  opacity: 0.4;
-}
-
-.global-nav__list li {
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-
-
 /* List and AI button container*/
 .global-links {
   display: flex;
@@ -404,7 +389,7 @@ a.resume:hover {
   height: 16px;
   flex-shrink: 0;
 
-  background-image: url("..assets/components/icon--ai-default.svg");
+  background-image: url("../assets/components/icon--ai-default.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -414,8 +399,30 @@ a.resume:hover {
 
 /* icon swap */
 .global-nav__button:hover .global-nav__button-icon {
-  background-image: url("..assets/components/icon--ai-hover.svg");
+  background-image: url("../assets/components/icon--ai-hover.svg");
 }
+
+.c-utility-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  background: rgba(18, 18, 20, 0.72);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.18);
+}
+
+.is-bottom-left {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+
 
 /****** CTA Button *******/
 /* --------------------- */
@@ -876,11 +883,15 @@ footer {
   text-align: center;
   font-size: 14px;
   border-top: 1px solid #f2f2f2;
-  padding: 0;
+  padding: var(--gap-1);
+}
+
+footer {
+  margin: var(--gap-3);
 }
 
 footer p {
-  margin: var(--gap-3);
+  margin: 0 0 0.5rem 0;
 }
 
 footer a {
@@ -918,6 +929,26 @@ footer a {
   border-bottom: 1px solid #F2F2F2;
   box-sizing: border-box;
   padding: 20px 0;
+}
+
+.project-card-thumb,
+.work-feature__media,
+.global-nav__button,
+.primary-btn,
+.primary-btn-small,
+.cta__button {
+  transition:
+    background-color var(--motion-fast) var(--ease-standard),
+    border-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard),
+    opacity var(--motion-fast) var(--ease-standard),
+    transform var(--motion-fast) var(--ease-standard),
+    box-shadow var(--motion-fast) var(--ease-standard);
+}
+
+.project-card-thumb:hover,
+.work-feature__media:hover {
+  transform: translateY(-2px);
 }
 
 .project-card img {
@@ -1044,7 +1075,7 @@ footer a {
 }
 
 .profile__img {
-  display: block;
+  display: none;
   width: 100%;
   height: auto;
 }
@@ -1091,7 +1122,8 @@ footer a {
 }
 
 
-.profile-trigger {
+.profile-trigger,
+.profile-image-trigger {
   height: 1px;
   width: 100%;
 }
@@ -1158,6 +1190,8 @@ footer a {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   display: flex;
   align-items: center;
@@ -1168,6 +1202,13 @@ footer a {
   transition: opacity 0.2s ease;
 
   z-index: 1000;
+}
+
+body.is-lightbox-open .page-main,
+body.is-modal-open .page-main,
+body.is-layer-3-open > header,
+body.is-layer-3-open > footer {
+  filter: blur(4px);
 }
 
 .lightbox.is-open {
@@ -1407,6 +1448,108 @@ footer a {
   gap: var(--gap-4);
 }
 
+.pattern-slides.is-enhanced {
+  position: relative;
+  gap: var(--gap-2);
+  padding-top: 46px;
+}
+
+.pattern-slides__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.pattern-slides__track {
+  display: flex;
+  align-items: stretch;
+  transition:
+    transform var(--motion-slow) var(--ease-standard);
+  will-change: transform;
+}
+
+.pattern-slides.is-enhanced .slide {
+  flex: 0 0 100%;
+  opacity: 0.32;
+  transform: scale(0.985);
+  transition:
+    opacity var(--motion-medium) var(--ease-standard),
+    transform var(--motion-medium) var(--ease-standard);
+}
+
+.pattern-slides.is-enhanced .slide.is-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pattern-slides__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  padding: 4px 6px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--theme-surface, #fff) 82%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  width: 100%;
+}
+
+.pattern-slides__control,
+.pattern-slides__dot {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.pattern-slides__control {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--theme-surface-muted, #F2F2F2);
+  color: var(--theme-text, #111);
+  font-size: 26px;
+  line-height: 1;
+  transition:
+    transform var(--motion-fast) var(--ease-standard),
+    background-color var(--motion-fast) var(--ease-standard),
+    color var(--motion-fast) var(--ease-standard);
+}
+
+.pattern-slides__control:hover,
+.pattern-slides__control:focus-visible {
+  transform: translateY(-1px);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.pattern-slides__pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pattern-slides__dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--theme-divider, #D9D9D9);
+  transition:
+    transform var(--motion-fast) var(--ease-standard),
+    background-color var(--motion-fast) var(--ease-standard);
+}
+
+.pattern-slides__dot.is-active {
+  background: var(--color-accent);
+  transform: scale(1.45);
+}
+
 .pattern-slides .slide {
   display: flex;
   flex-direction: column;
@@ -1549,12 +1692,40 @@ footer a {
 
   height: 350px;
 
-  gap: var(--space-md);
+  gap: 0;
   will-change: transform;
 
-  transition: transform 300ms ease;
+  transition: transform 960ms var(--motion-ease-apple);
   scroll-snap-type: x mandatory;
-  /*transition: transform 0.4s ease;*/
+}
+
+.slide-show__track img {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(1.018);
+  transform-origin: center;
+  transition:
+    opacity 900ms var(--motion-ease-apple),
+    transform 1300ms var(--motion-ease-apple);
+  will-change: opacity, transform;
+}
+
+.slide-show__track img.is-active {
+  opacity: 1;
+  transform: scale(1);
+  animation: slide-show-active-drift 7600ms var(--motion-ease-apple) forwards;
+}
+
+@keyframes slide-show-active-drift {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.025);
+  }
 }
 
 /* Controls */
@@ -1606,12 +1777,18 @@ footer a {
 
 body.fade-out {
   opacity: 0;
-  transition: opacity 220ms ease;
+  transform: translateY(-6px);
+  transition:
+    opacity 260ms var(--motion-ease-apple),
+    transform 260ms var(--motion-ease-apple);
 }
 
 .fade-in {
   opacity: 1;
-  transition: opacity 220ms ease;
+  transform: translateY(0);
+  transition:
+    opacity var(--motion-page-load-duration) var(--motion-ease-apple),
+    transform var(--motion-page-load-duration) var(--motion-ease-apple);
 }
 
 
@@ -1691,7 +1868,7 @@ body.fade-out {
     text-align: left;
   }
 
-  footer p {
+  footer {
   margin: var(--gap-1);
 }
 

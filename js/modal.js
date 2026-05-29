@@ -24,6 +24,11 @@ document.addEventListener("click", (e) => {
 
 export function openModal({ data = null, mode = "panel", src = null }) {
   const modalRoot = document.getElementById("modal-root");
+
+  if (!modalRoot) {
+    console.warn("Modal root not found");
+    return null;
+  }
   
   const content = mode === "lightbox"
   ? `
@@ -88,6 +93,7 @@ export function openModal({ data = null, mode = "panel", src = null }) {
   
   const overlay = document.getElementById("modal-overlay");
   overlay.setAttribute("data-open", "true");
+  document.body.classList.add("is-modal-open");
   
   
   const panelEl = document.querySelector(".overlay__panel");
@@ -229,6 +235,8 @@ export function openModal({ data = null, mode = "panel", src = null }) {
   .addEventListener("click", (e) => {
     if (e.target === overlay) closeModal();
   });
+
+  document.addEventListener("keydown", handleModalEscape);
   
   return overlay;
   
@@ -246,7 +254,14 @@ function closeModal() {
     rail.removeAttribute("data-locked");
   }
   
-  modalRoot.innerHTML = "";
+  document.body.classList.remove("is-modal-open");
+  document.removeEventListener("keydown", handleModalEscape);
+  if (modalRoot) modalRoot.innerHTML = "";
+}
+
+function handleModalEscape(e) {
+  if (e.key !== "Escape") return;
+  closeModal();
 }
 
 // ======================================================
@@ -318,5 +333,3 @@ export function openCaseStudy(project) {
 // ======================================================
 // END LAYER 3 CASE STUDY OVERLAY
 // ======================================================
-
-

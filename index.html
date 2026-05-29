@@ -16,7 +16,7 @@
         <meta property="og:image" content="awd.png"/>
         <meta property="og:description" content="Angela Wallace Design Portfolio"/>
         <meta property="og:url" content="https://www.angelawallace.net/index.html"/>
-        <title>Angela Wallace // Senior UI Designer</title>
+        <title>Angela Wallace // Senior UI/UX Designer</title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/> 
         <meta name="description" content="Angela Wallace Design Portfolio"/>
         <meta name="author" content="Angela Wallace"/>
@@ -27,7 +27,10 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
-    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-tokens.css" /> <!-- <<-- SHARED TOKENS FOR ALL PRODUCTS -->
+    <link rel="stylesheet" href="../shared/css/global-tokens.css" />
+    <link rel="stylesheet" href="../shared/css/global-components.css" />
+    <link rel="stylesheet" href="../shared/css/utilities.css" />
+    <link rel="stylesheet" href="../shared/css/motion.css" />
     <link rel="stylesheet" href="css/tokens.css" />
     <link rel="stylesheet" href="css/main.css" />
     <!-- Layer 3 Case Studies -->
@@ -44,7 +47,7 @@
                         
                         <div class="designer-name">
                             <p><a href="#top">Angela Wallace</a></p>
-                            <p>Senior UI Designer</p>
+                            <p>Senior UI/UX Designer</p>
                         </div>
                         
                         <div class="global-links">
@@ -67,11 +70,28 @@
                                 height="16"
                                 />
                             </a>
+                            
                         </div>
                         
                     </div>
                 </div>
-            </header>
+    </header>
+
+    <div class="c-utility-nav is-bottom-left">
+        <div>
+            <a class="text-link utility" href="ai-transparency.html">
+                <span
+                class="icon rotate-0"
+                data-icon="ai"
+                aria-hidden="true">
+                </span>
+                AI Transparency
+            </a>
+        </div>
+        <div>
+            <button class="button--depress">Inspector Mode</button>
+        </div>
+    </div>
     
     <main id="main" class="page-main">
         
@@ -135,9 +155,8 @@
         
         
         
-        <!-- /* TODO: remove ghost layers after About layout is finalized (container, content-flow, content-rail) */ -->
-        <div id="content-rail">
-            <div class="content-flow">
+        <div id="content-rail" class="content-rail page-flow">
+            <div class="content-flow section-flow">
 
                 <!-- Storytelling section 
                 <section id="work" class="section section-callout">
@@ -155,8 +174,8 @@
                 
                 <!-- Section 1: Work -->
                 <section id="work" class="section work" data-section="work">
-                    <div class="container">  
-                        <header class="layout-section-header">
+                    <div class="container section-shell">  
+                        <header class="layout-section-header section-slot section-slot--header">
                             <h2 class="section-heading heading--display">
                                 <span class="heading-main">Selected Work</span> <!--<span class="heading-accent">works</span>-->
                             </h2>
@@ -166,7 +185,7 @@
                         </header>                  
 
                         <!-- HERE IS THE PROJECT PRESENTATION SECTION -->
-                        <div class="projects-wrapper projects-wrapper--column">
+                        <div class="projects-wrapper projects-wrapper--column section-slot section-slot--content">
                             <div id="project-list"></div>
                         </div>
                         <!-- HERE IS THE END OF THE PROJECT PRESENTATION SECTION -->
@@ -176,8 +195,8 @@
 
                 <!-- Section 2: Services -->
                 <section class="section services" id="services" aria-labelledby="services-title"  data-section="services">
-                    <div class="container pad-vt">
-                        <header>
+                    <div class="container section-shell pad-vt">
+                        <header class="section-slot section-slot--header">
                             <h2 class="section-heading heading--display">
                                 <span class="heading-main">Design systems</span>
                                 <span class="heading-accent">ambassador</span>
@@ -225,8 +244,8 @@
 
                 <!-- Section: Slideshow -->
                 <section class="section section-callout">
-                    <div class="container">
-                        <header class="layout-section-header">
+                    <div class="container section-shell">
+                        <header class="layout-section-header section-slot section-slot--header">
                             <h2 class="section-heading heading--display">
                                 <span class="heading-main">Trusted</span> <span class="heading-accent">by</span>
                             </h2>
@@ -314,11 +333,10 @@
 
                 <!-- Section 3: About me -->
                 <section class="section" id="about" aria-labelledby="about-title"  data-section="about">
-                    <!-- /* TODO: remove ghost layers after About layout is finalized (container, content-flow, content-rail) */ -->
-                    <div class="container">
+                    <div class="container section-shell">
                         <div class="media about">
                             <!-- Row 1 -->
-                            <header class="layout-section-header">
+                            <header class="layout-section-header section-slot section-slot--header">
                                 <h2 class="section-heading heading--display">
                                     <span class="heading-main">About</span>
                                     <span class="heading-accent">me</span>
@@ -347,38 +365,13 @@
     </main>
 
     <footer>
-        <!--
-        <section>
-            <div class="button-row">
-                <a class="cta__button" href="work.html">
-                    <span class="cta__button-label">hello@angelawallace.net</span>
-                    !-- span alone = single class icon, inline = specified icon --
-                    <span class="cta__button-icon">
-                        <img
-                        class="cta__button-icon"
-                        src="assets/icons/explore.svg"
-                        alt="AWD AI icon"
-                        width="32"
-                        height="32"
-                        />
-                    </span>
-                </a>
-                <a class="cta__button" href="work.html">
-                    <span class="cta__button-label">download resume</span>
-                    !-- span alone = single class icon, inline = specified icon --
-                    <span class="cta__button-icon">
-                        <img
-                        class="cta__button-icon"
-                        src="assets/icons/explore.svg"
-                        alt="AWD AI icon"
-                        width="32"
-                        height="32"
-                        />
-                    </span>
-                </a>
-            </div>
-        </section>-->
         <p>&#169; 2026 Angela Wallace Design</p>
+        <div class="theme-switcher" aria-label="Color theme">
+            <button class="theme-switcher__button" type="button" data-theme-option="default" aria-pressed="true">AWD</button>
+            <button class="theme-switcher__button" type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+            <button class="theme-switcher__button" type="button" data-theme-option="night" aria-pressed="false">Night</button>
+        </div>
+        
         <!--<img src="assets/AWD-sticky-logo.svg" class="simple-watermark" alt="Angela Wallace Design" />-->
     </footer>
     
@@ -388,132 +381,7 @@
 
     
 
-<script>
-    const introSection = document.querySelector('.intro-section');
-    
-    function updateNavVisibility() {
-        if (!introSection) return;
-        
-        const introBottom = introSection.getBoundingClientRect().bottom;
-        
-        if (introBottom <= 0) {
-            // intro is completely above viewport
-            document.body.classList.add('show-section-nav');
-        } else {
-            // intro is still visible
-            document.body.classList.remove('show-section-nav');
-        }
-    }
-    
-    // run on scroll
-    window.addEventListener('scroll', updateNavVisibility);
-    
-    // run on load
-    updateNavVisibility();
-    
-  
-    
-    
-
-    // PROFILE IMAGE HIDE/SHOW LOGIC
-    const profileImage = document.querySelector('.profile');
-    const aboutSection = document.querySelector('#about');
-    const aboutTrigger = document.querySelector('.profile-trigger');
-    const mobileQuery = window.matchMedia('(max-width: 480px)');
-
-    let observer = null;
-
-    function setupProfileImageBehavior() {
-    if (!profileImage || !aboutSection) return;
-
-    if (observer) {
-        observer.disconnect();
-        observer = null;
-    }
-
-    // MOBILE behavior (bottom trigger)
-    if (mobileQuery.matches && aboutTrigger) {
-        observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-            profileImage.classList.add('is-visible');
-            } else {
-            profileImage.classList.remove('is-visible');
-        }
-        });
-        }, {
-        root: null,
-        threshold: 0,
-        rootMargin: '0px 0px -18% 0px'
-        });
-
-        observer.observe(aboutTrigger);
-        return;
-    }
-
-    // DESKTOP behavior (section visibility)
-    observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            profileImage.classList.add('is-visible');
-            } else {
-            profileImage.classList.remove('is-visible');
-        }
-        });
-    }, {
-        root: null,
-        threshold: 0.2
-    });
-
-    observer.observe(aboutSection);
-    }
-
-    setupProfileImageBehavior();
-
-    // Handle breakpoint changes safely
-    if (mobileQuery.addEventListener) {
-    mobileQuery.addEventListener('change', setupProfileImageBehavior);
-    } else {
-    mobileQuery.addListener(setupProfileImageBehavior);
-    }
-
-    // INLINE ANCHOR ACTIVE STATE (SCROLL-BASED)
-
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-    const anchorMap = [...anchorLinks]
-    .map(link => {
-        const target = document.querySelector(link.getAttribute('href'));
-        return target ? { link, target } : null;
-    })
-    .filter(Boolean);
-
-    const anchorObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const match = anchorMap.find(item => item.target === entry.target);
-        if (!match) return;
-
-        if (entry.isIntersecting) {
-        anchorLinks.forEach(l => l.classList.remove('is-active'));
-        match.link.classList.add('is-active');
-        }
-    });
-    }, {
-    root: null,
-    threshold: 0.4
-    });
-
-    // observe each section
-    anchorMap.forEach(item => anchorObserver.observe(item.target));
-    
-</script>
-
-<script type="module">
-  import { initPageTransitions, initPageLoad } from './js/interactions.js';
-
-  initPageLoad();
-  initPageTransitions();
-</script>
+<script type="module" src="./js/site.js?v=motion"></script>
 
 <!-- Data rendering logic -->
 <script type="module" src="./js/data.js?v=2"></script>
@@ -521,5 +389,6 @@
 <script type="module" src="./js/modal.js"></script>
 <!-- Load navigation logic -->
 <script type="module" src="./js/navigation.js?v=2"></script>
+<script type="module" src="../../../shared/js/base.js"></script>
 </body>
 </html>

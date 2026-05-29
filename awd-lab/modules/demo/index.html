@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWD Visualization Modules Demo</title>
+  <link rel="stylesheet" href="../../css/tokens.css" />
+  <link rel="stylesheet" href="../shared/visualization-tokens.css" />
+  <link rel="stylesheet" href="../scatterplot/scatterplot.css" />
+  <link rel="stylesheet" href="../surface-node/surface-node.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #f4f4f4;
+      color: #111;
+      font-family: Inter, system-ui, sans-serif;
+    }
+
+    main {
+      display: grid;
+      gap: 48px;
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    section {
+      display: grid;
+      gap: 20px;
+    }
+
+    h1,
+    h2,
+    p {
+      margin: 0;
+    }
+
+    .demo-shell {
+      padding: 20px;
+      background: #fff;
+    }
+
+    #surface-demo {
+      min-height: 620px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .demo-status {
+      min-height: 1.5rem;
+      color: #555;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>AWD Visualization Modules Demo</h1>
+      <p>Standalone initialization without AWD Lab page markup.</p>
+    </header>
+
+    <section>
+      <h2>Scatterplot</h2>
+      <div id="scatterplot-demo" class="demo-shell"></div>
+      <p id="scatterplot-status" class="demo-status" aria-live="polite"></p>
+    </section>
+
+    <section>
+      <h2>Surface Node Map</h2>
+      <div id="surface-demo" class="demo-shell"></div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { createScatterplot } from "../scatterplot/scatterplot.js";
+    import {
+      loadScatterplotData,
+      normalizeScatterplotData
+    } from "../scatterplot/scatterplot-data.js";
+    import { createSurfaceNodeMap } from "../surface-node/surface-node.js";
+    import { surfaceNodeData } from "../surface-node/surface-node-data.js";
+
+    const status = document.getElementById("scatterplot-status");
+    const scatterplotData = normalizeScatterplotData(
+      await loadScatterplotData("../../scripts/data.json")
+    );
+
+    createScatterplot({
+      container: "#scatterplot-demo",
+      data: scatterplotData,
+      options: {
+        onNodeClick: (datum) => {
+          status.textContent = `Selected: ${datum.heading?.title ?? datum.id}`;
+        }
+      }
+    });
+
+    createSurfaceNodeMap({
+      container: "#surface-demo",
+      data: surfaceNodeData,
+      options: {
+        assetBaseUrl: "../../"
+      }
+    });
+  </script>
+</body>
+</html>

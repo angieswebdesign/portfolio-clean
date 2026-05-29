@@ -26,9 +26,11 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/dej8pod.css">
-    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-tokens.css" />
+    <link rel="stylesheet" href="../shared/css/global-tokens.css" />
+    <link rel="stylesheet" href="../shared/css/global-components.css" />
+    <link rel="stylesheet" href="../shared/css/utilities.css" />
+    <link rel="stylesheet" href="../shared/css/motion.css" />
     <link rel="stylesheet" href="css/tokens.css" />
-    <link rel="stylesheet" href="https://cdn.angelawallace.net/css/global-components.css" />
     <link rel="stylesheet" href="css/components.css" />
     <link rel="stylesheet" href="css/feature-layout.css" />
 </head>
@@ -49,6 +51,11 @@
                     </span>
                     <span>Back</span>
                 </a>
+            </div>
+            <div class="theme-switcher" aria-label="Color theme">
+                <button class="theme-switcher__button" type="button" data-theme-option="default" aria-pressed="true">AWD</button>
+                <button class="theme-switcher__button" type="button" data-theme-option="dark" aria-pressed="false">Dark</button>
+                <button class="theme-switcher__button" type="button" data-theme-option="night" aria-pressed="false">Night</button>
             </div>
         </div>
     </header>
@@ -258,55 +265,8 @@
                 </p>
             </footer>
 
-    <script type="module">
-        import { initSlideShow } from './js/slideshow.js';
-        document.querySelectorAll('.slide-show').forEach(initSlideShow);
-    </script>
-
-
-    <script>
-            const nav = document.querySelector('#navList');
-
-            if (nav) {
-                const links = nav.querySelectorAll('a[href^="#"]');
-
-                const map = [...links]
-                .map(link => {
-                    const target = document.querySelector(link.getAttribute('href'));
-                    return target ? { link, target } : null;
-                })
-                .filter(Boolean);
-
-                const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    const match = map.find(item => item.target === entry.target);
-                    if (!match) return;
-
-                    if (entry.isIntersecting) {
-                    links.forEach(link => link.classList.remove('is-active'));
-                    match.link.classList.add('is-active');
-                    }
-                });
-                }, {
-                root: null,
-                threshold: 0.5
-                });
-
-                map.forEach(item => observer.observe(item.target));
-            }
-
-            
-    </script>
-    
-
-    <script type="module">
-        import { initPageTransitions, initPageLoad } from './js/interactions.js';
-
-        initPageLoad();
-        initPageTransitions();
-    </script>
-
-    <script type="module" src="./js/base.js"></script>
+    <script type="module" src="./js/method-page.js?v=motion"></script>
+    <script type="module" src="../shared/js/base.js"></script>
 
     <!--<script type="module" src="/./js/main.js"></script> enable when moving all inline and external js to one file-->
 </body>

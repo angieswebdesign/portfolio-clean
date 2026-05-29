@@ -29,6 +29,7 @@ fetch("scripts/data.json")
     projectsCache = projects;
 
     const listRoot = document.getElementById("project-list");
+    if (!listRoot) return;
+
     listRoot.innerHTML = projects.map(renderProjectCard).join("");
   });
-

@@ -1,27 +1,28 @@
-// intro/intro.js
+import { createSurfaceNodeMap } from "../modules/surface-node/surface-node.js";
+import { surfaceNodeData } from "../modules/surface-node/surface-node-data.js";
 
-import { initMotion } from "./motion.js";
+let surfaceInstance = null;
 
-export function initIntro() {
-  const nodes = document.querySelectorAll("[data-node]");
-  const surface = document.querySelector("[data-surface]");
+export function initIntro(config = {}) {
+  const container = config.container ?? document.querySelector("[data-surface-node-map]") ?? document.querySelector(".intro-viz");
 
-  if (!nodes.length || !surface) {
-    console.warn("Intro init failed: missing nodes or surface");
-    return;
-  }
+  if (!container) return null;
 
-  initMotion({ nodes, surface });
-
-  revealNodes(nodes);
-}
-
-function revealNodes(nodes) {
-  nodes.forEach((node, i) => {
-    setTimeout(() => {
-      node.classList.add("node-visible");
-    }, i * 80);
+  surfaceInstance?.destroy();
+  surfaceInstance = createSurfaceNodeMap({
+    container,
+    data: config.data ?? surfaceNodeData,
+    options: {
+      assetBaseUrl: config.assetBaseUrl ?? "",
+      ...config.options
+    }
   });
+
+  return surfaceInstance;
 }
 
-window.addEventListener("DOMContentLoaded", initIntro);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", () => initIntro());
+} else {
+  initIntro();
+}
