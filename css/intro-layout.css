@@ -86,6 +86,10 @@ COMPONENTS
   overflow: visible !important;
 }
 
+.intro-layout #project-list p {
+  font-size: 1.125rem;
+}
+
 /* Prevent profile component flicker on index page load */
 
 .intro-layout .profile {
@@ -233,7 +237,6 @@ body.show-section-nav .intro-hide {
 
 
 .intro-layout section > .container {
-  display: block;         /* kills grid behavior from main.css */
   align-items: initial;    /* reset */
   place-items: initial;    /* reset */
 }
@@ -626,6 +629,12 @@ WORK FEATURE - (LANDING PAGE ONLY)
     margin: -30px 0 0;
     object-position: -600px;
   }
+}
+
+/* Services */
+
+.intro-layout .services .section-heading {
+  flex-direction: row;
 }
 
 /* =========================

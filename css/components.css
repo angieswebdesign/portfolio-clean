@@ -592,7 +592,7 @@ a.utility {
    HEADING PATTERN
 ========================= */
 
-/* HEADING PATTERN CONTRACT
+/* OLD HEADING PATTERN CONTRACT
    Required variables:
    - --heading-main-size
    - --heading-accent-size
@@ -604,6 +604,15 @@ a.utility {
    - Variants may override only the above variables
 */
 
+/* NEW HEADING PATTERN CONTRACT
+   Required variables:
+   - --heading-size
+
+   Rules:
+   - Variants must not introduce new tokens
+   - Variants may override only the above variables
+*/
+
 .section-heading {
   margin: 0;
   line-height: var(--lh-tight);
@@ -611,11 +620,16 @@ a.utility {
   flex-direction: column;
 
   /* LOCAL CONTROL — overrides chaos */
-  --heading-main-size: var(--type-h1);
+  --heading-size: var(--type-h1);
+
+  /* No longer need these with one font size
   --heading-accent-size: calc(var(--type-h1) * 0.85);
   --heading-accent-offset: 0px;
+  */
 }
 
+
+/* Old pattern: two font sizes
 .heading-main {
   display: block;
   font-family: var(--font-sans);
@@ -636,9 +650,31 @@ a.utility {
   font-size: var(--heading-accent-size);
   margin-top: var(--heading-accent-offset);
 }
+  */
+
+/* New pattern: one font size */
+.heading-main {
+  display: block;
+  font-family: var(--font-sans);
+  font-weight: 900;
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  color: var(--color-text);
+  font-size: var(--heading-size);
+}
+
+.heading-accent {
+  display: block;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--color-accent);
+  letter-spacing: var(--ls-script);
+  font-size: var(--heading-size);
+}
 
 
-/* Added small, med, large for future refactor to replace --type-h1, --type-h2... */
+/* Added small, med, large for future refactor to replace --type-h1, --type-h2... 
 .section-heading.hero {
   --heading-main-size: var(--type-display-xl);
   --heading-accent-size: calc(var(--type-display-xl) * 0.85);
@@ -661,6 +697,7 @@ a.utility {
   --heading-accent-size: calc(var(--type-h2) * 0.9);
   --heading-accent-offset: -4px;
 }
+*/
 
 
 
@@ -671,15 +708,17 @@ a.utility {
 }
 
   .overlay-panel {
-    --heading-main-size: 2rem;
-    --heading-accent-size: 1.875rem;
+    --heading-size: 2rem;
+    /* no longer needed --heading-accent-size: 1.875rem;*/
   }
 
+  /*
   .overlay-panel .heading-accent {
     margin-top: -7px;
   }
+    */
 
-/* Scale Modifiers */
+/* Scale Modifiers 
 
 .heading--display .heading-main {
   font-size: var(--type-display);
@@ -706,6 +745,27 @@ a.utility {
   font-size: calc(var(--type-h2) * 0.85);
   margin-top: -8px;
 }
+  */
+
+/* New Scale Modifiers (one font size) */
+
+.section-heading.hero {
+  --heading-size: var(--type-display-xl);
+}
+
+.section-heading.large {
+  --heading-size: var(--type-display);
+}
+
+.section-heading.medium {
+  --heading-size: var(--type-h1);
+}
+
+.section-heading.small {
+  --heading-size: var(--type-h2);
+}
+
+
 
 /* ========================= */
 /* Heading Pattern Page Override */
@@ -736,6 +796,10 @@ a.utility {
   }
     */
 
+.section-callout .section-slot--header .heading-main {
+  font-size: 52px;
+}
+
 /* =========================
    3-COL CARD
 ========================= */
@@ -762,9 +826,12 @@ a.utility {
 /* =========================
    TAGLINE
 ========================= */
+
 .tagline {
-  font-size: var(--type-body-lg);
-  font-weight: 200;
+    font-size: var(--type-body-xl);
+    line-height: var(--lh-tagline);
+    font-weight: 200;
+    padding: 0;
 }
 
 /* =========================

@@ -19,10 +19,13 @@
   --type-display-xl: 90px; /* landing intro with title */
   --type-display: 64px;
 
+  --type-callout: 58px;
+
   --type-h1: 48px;
   --type-h2: 36px;
   --type-h3: 28px;
 
+  --type-body-xl: 28px;
   --type-body-lg: 22px;
   --type-body: 16px;
   --type-small: 14px;
@@ -31,6 +34,7 @@
   --lh-tight: 0.85;
   --lh-normal: 1.25;
   --lh-body: 1.5;
+  --lh-tagline: 34px;
   
   /* letter spacing */
   --ls-tight: -0.02em;
